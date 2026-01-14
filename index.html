@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>She Shield – Women Safety</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #F8EDEB;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #D63384;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 16px;
+      margin: 12px 0;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      background: #F4A7B9;
+      color: #4A154B;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #f091a8;
+    }
+
+    .box {
+      background: #FFF;
+      padding: 12px;
+      border-radius: 10px;
+      margin-top: 15px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>She Shield</h1>
+
+<button class="btn" onclick="playSiren()">🚨 Police Siren</button>
+
+<button class="btn" onclick="emergencySOS()">🆘 Emergency SOS</button>
+
+<button class="btn" onclick="shareLocation()">📍 Share Live Location</button>
+
+<div class="box">
+<b>Emergency Helplines (India)</b><br>
+Police: 100<br>
+Women Helpline: 181<br>
+Ambulance: 108
+</div>
+
+<audio id="siren">
+  <source src="https://actions.google.com/sounds/v1/emergency/police_siren.ogg" type="audio/ogg">
+</audio>
+
+<script>
+function playSiren() {
+  document.getElementById("siren").play();
+}
+
+function emergencySOS() {
+  document.getElementById("siren").play();
+  alert("🚨 Emergency SOS Activated!");
+}
+
+function shareLocation() {
+  navigator.geolocation.getCurrentPosition(
+    function(pos) {
+      alert(
+        "📍 Live Location Shared\n\nLatitude: " +
+        pos.coords.latitude +
+        "\nLongitude: " +
+        pos.coords.longitude
+      );
+    },
+    function() {
+      alert("Location permission denied");
+    }
+  );
+}
+</script>
+
+</body>
+</html>
