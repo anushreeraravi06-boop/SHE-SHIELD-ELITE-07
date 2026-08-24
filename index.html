@@ -2,35 +2,36 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#C9A227">
-
-<title>She-Shield | Smart Women Safety</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#b91c1c">
+<title>She-Shield</title>
 
 <style>
-:root{
-    --bg:#fff8ef;
-    --gold:#c9a227;
-    --dark:#342824;
-    --muted:#776963;
-    --red:#b42318;
-    --green:#2e7d32;
-    --white:#ffffff;
-    --line:#eaded5;
-}
-
 *{
     box-sizing:border-box;
 }
 
-body{
-    margin:0;
-    background:var(--bg);
-    color:var(--dark);
-    font-family:Arial,sans-serif;
+:root{
+    --cream:#fff8ef;
+    --white:#ffffff;
+    --gold:#c9a227;
+    --red:#b91c1c;
+    --dark:#302522;
+    --muted:#756863;
+    --green:#24803c;
+    --border:#eaded5;
 }
 
-button,input{
+body{
+    margin:0;
+    background:var(--cream);
+    color:var(--dark);
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+button,
+input,
+select{
     font:inherit;
 }
 
@@ -38,76 +39,43 @@ button{
     cursor:pointer;
 }
 
-a{
-    text-decoration:none;
-}
-
 .hidden{
     display:none!important;
 }
 
-/* SPLASH */
-
-#splash{
-    position:fixed;
-    inset:0;
-    background:var(--bg);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    z-index:999;
-}
-
-#splash h1{
-    color:var(--gold);
-    font-size:45px;
-    letter-spacing:3px;
-    margin:0;
-}
-
-#splash p{
-    color:var(--muted);
-}
-
-/* HEADER */
-
 header{
+    height:64px;
     position:sticky;
     top:0;
-    z-index:50;
-    height:62px;
+    z-index:30;
     background:#fff8eff5;
     backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
+    border-bottom:1px solid var(--border);
     display:flex;
     align-items:center;
     justify-content:space-between;
     padding:8px 14px;
 }
 
-.logo-text{
-    color:var(--gold);
+.logo{
     font-weight:900;
     letter-spacing:2px;
+    color:var(--gold);
 }
 
-.nav-btn{
+.nav{
     width:42px;
     height:42px;
     border-radius:50%;
-    border:1px solid var(--line);
+    border:1px solid var(--border);
     background:white;
-    font-size:22px;
-    color:var(--dark);
+    font-size:24px;
 }
 
-/* GENERAL */
-
 main{
-    max-width:1050px;
+    max-width:1000px;
     margin:auto;
-    padding:20px 14px 70px;
+    padding:18px 14px 60px;
 }
 
 .page{
@@ -120,78 +88,84 @@ main{
 
 .hero{
     text-align:center;
-    padding:45px 5px 30px;
+    padding:45px 10px 30px;
 }
 
 .hero h1{
-    margin:0;
     color:var(--gold);
     font-size:48px;
-    letter-spacing:2px;
+    margin:0;
+    letter-spacing:3px;
 }
 
 .hero p{
     color:var(--muted);
 }
 
-.home-grid{
-    max-width:820px;
+.homeGrid{
+    max-width:800px;
     margin:auto;
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:18px;
 }
 
-.home-card{
-    min-height:180px;
-    background:white;
-    border:1px solid var(--line);
+.homeButton{
+    min-height:190px;
     border-radius:25px;
-    box-shadow:0 10px 30px #34282412;
+    border:1px solid var(--border);
+    background:white;
+    box-shadow:0 10px 30px #00000010;
     color:var(--dark);
-    font-weight:800;
 }
 
-.home-card.emergency{
-    border-top:6px solid var(--red);
+.homeButton.emergency{
+    border-top:7px solid var(--red);
 }
 
-.home-card.safe{
-    border-top:6px solid var(--gold);
+.homeButton.safe{
+    border-top:7px solid var(--gold);
 }
 
-.home-icon{
-    display:block;
-    font-size:52px;
+.homeIcon{
+    font-size:55px;
 }
 
-.home-card h2{
+.homeButton h2{
     margin:8px;
 }
 
-.home-card p{
+.homeButton p{
     color:var(--muted);
-    font-weight:400;
 }
 
-.head{
-    margin:10px 0 20px;
+.title{
+    margin-bottom:20px;
 }
 
-.tag{
+.title span{
     color:var(--gold);
     font-size:11px;
     font-weight:900;
     letter-spacing:2px;
 }
 
-.head h2{
-    font-size:34px;
+.title h2{
     margin:5px 0;
+    font-size:34px;
 }
 
-.head p{
+.title p{
     color:var(--muted);
+}
+
+.panel{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:18px;
+    margin:12px 0;
+    box-shadow:0 8px 24px #0000000d;
 }
 
 .grid{
@@ -200,211 +174,190 @@ main{
     gap:12px;
 }
 
-.card{
+.feature{
     min-height:145px;
     background:white;
-    border:1px solid var(--line);
-    border-radius:19px;
-    box-shadow:0 8px 22px #34282410;
+    border:1px solid var(--border);
+    border-radius:18px;
     padding:16px;
     text-align:left;
     color:var(--dark);
+    box-shadow:0 7px 20px #0000000b;
 }
 
-.card-icon{
+.featureIcon{
     font-size:30px;
 }
 
-.card h3{
+.feature h3{
     margin:8px 0 5px;
 }
 
-.card p{
-    margin:0;
+.feature p{
     color:var(--muted);
     font-size:13px;
+    margin:0;
     line-height:1.4;
 }
 
-.panel,
-.info,
-.history{
-    background:white;
-    border:1px solid var(--line);
-    border-radius:18px;
-    padding:17px;
-    margin:12px 0;
-    box-shadow:0 8px 22px #34282410;
-}
-
-.actions{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-    margin-top:10px;
-}
-
-.btn{
-    min-height:49px;
-    border-radius:13px;
-    border:1px solid var(--line);
-    background:white;
-    color:var(--dark);
-    padding:11px 14px;
-    font-weight:800;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-}
-
 .primary{
-    background:var(--gold);
-    border-color:var(--gold);
-    color:white;
+    background:var(--gold)!important;
+    color:white!important;
+    border-color:var(--gold)!important;
 }
 
 .danger{
-    color:var(--red);
-    border-color:#dfbbb6;
+    background:var(--red)!important;
+    color:white!important;
+    border-color:var(--red)!important;
 }
 
-.safe{
-    background:var(--green);
-    border-color:var(--green);
-    color:white;
+.green{
+    background:var(--green)!important;
+    color:white!important;
+    border-color:var(--green)!important;
 }
 
-/* EMERGENCY */
+.btn{
+    min-height:50px;
+    width:100%;
+    padding:12px 15px;
+    border:1px solid var(--border);
+    border-radius:13px;
+    background:white;
+    color:var(--dark);
+    font-weight:800;
+    margin-top:9px;
+}
+
+.two{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
 
 .status{
     display:flex;
     align-items:center;
     gap:10px;
-    margin-bottom:14px;
+    margin-bottom:15px;
 }
 
-.dot{
-    width:13px;
-    height:13px;
+.statusDot{
+    width:14px;
+    height:14px;
     border-radius:50%;
     background:#aaa;
 }
 
-.dot.active{
+.statusDot.active{
     background:var(--red);
-    box-shadow:0 0 0 7px #b4231820;
-    animation:pulse .8s infinite;
+    box-shadow:0 0 0 7px #b91c1c22;
+    animation:pulse .7s infinite;
 }
 
 @keyframes pulse{
-    50%{
-        transform:scale(1.2);
-    }
+    50%{transform:scale(1.2);}
 }
 
-.sos{
+.bigSOS{
     width:100%;
-    min-height:80px;
+    min-height:85px;
     border:0;
-    border-radius:18px;
+    border-radius:20px;
     background:var(--red);
     color:white;
-    font-size:22px;
+    font-size:23px;
     font-weight:900;
 }
 
-/* FORM */
-
-.form{
-    display:grid;
-    gap:12px;
-}
-
-.form label{
-    font-weight:800;
-}
-
-.form input{
+input{
     width:100%;
+    padding:13px;
     margin-top:6px;
-    padding:12px;
-    border:1px solid #d7cbc4;
+    border:1px solid #d9cbc3;
     border-radius:10px;
     background:white;
 }
 
-/* CONTACTS */
+label{
+    display:block;
+    font-weight:800;
+    margin-bottom:12px;
+}
 
 .contact{
-    background:white;
-    border:1px solid var(--line);
-    border-radius:15px;
-    padding:14px;
-    margin:10px 0;
     display:flex;
     align-items:center;
-    gap:14px;
+    gap:13px;
+    padding:14px;
+    background:white;
+    border:1px solid var(--border);
+    border-radius:15px;
+    margin:10px 0;
 }
 
 .avatar{
-    width:42px;
-    height:42px;
-    border-radius:50%;
+    width:43px;
+    height:43px;
     display:grid;
     place-items:center;
+    border-radius:50%;
     background:#f2ded6;
     color:var(--gold);
     font-weight:900;
 }
 
-/* COUNTDOWN */
-
 .count{
     text-align:center;
-    font-size:90px;
+    font-size:95px;
     font-weight:900;
     color:var(--gold);
 }
 
-/* CAMERA */
+.sirenBox{
+    text-align:center;
+    font-size:100px;
+    padding:35px;
+    background:white;
+    border-radius:20px;
+}
+
+.sirenBox.running{
+    animation:sirenVisual .25s infinite alternate;
+}
+
+@keyframes sirenVisual{
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(1.08);
+        filter:drop-shadow(0 0 20px red);
+    }
+}
 
 .camera{
+    min-height:270px;
     background:#111;
     border-radius:18px;
     overflow:hidden;
-    min-height:260px;
     display:grid;
     place-items:center;
 }
 
-.camera video{
+video{
     width:100%;
     max-height:65vh;
 }
 
-/* SIREN */
-
-.siren{
-    font-size:95px;
-    text-align:center;
+.history{
     background:white;
-    border-radius:20px;
-    padding:30px;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:16px;
+    margin:10px 0;
 }
-
-.siren.active{
-    animation:alarm .25s infinite alternate;
-}
-
-@keyframes alarm{
-    to{
-        transform:scale(1.06);
-        filter:drop-shadow(0 0 18px #b42318);
-    }
-}
-
-/* HISTORY */
 
 .history h3{
     margin:0 0 5px;
@@ -415,15 +368,14 @@ main{
 }
 
 .history img{
-    width:140px;
-    height:100px;
+    width:150px;
+    height:110px;
     object-fit:cover;
     border-radius:10px;
+    margin-top:8px;
 }
 
-/* HELPLINES */
-
-.help-grid{
+.helpGrid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:12px;
@@ -431,86 +383,36 @@ main{
 
 .help{
     background:white;
-    border-radius:18px;
-    padding:22px;
-    text-align:center;
     color:var(--dark);
-    box-shadow:0 8px 22px #34282410;
+    padding:22px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 7px 20px #0000000c;
 }
 
 .help strong{
     display:block;
     color:var(--gold);
     font-size:30px;
-    margin-top:6px;
+    margin-top:7px;
 }
 
-/* FAKE CALL */
-
-#fakeCall{
-    position:fixed;
-    inset:0;
-    z-index:100;
-    background:linear-gradient(160deg,#29232e,#101010);
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:15px;
+.issue{
+    min-height:130px;
 }
-
-.call-box{
-    width:min(500px,95vw);
-}
-
-.call-avatar{
-    width:92px;
-    height:92px;
-    border-radius:50%;
-    background:white;
-    color:#333;
-    display:grid;
-    place-items:center;
-    margin:auto;
-    font-size:40px;
-}
-
-.conversation{
-    height:240px;
-    overflow:auto;
-    background:#ffffff12;
-    border-radius:16px;
-    padding:12px;
-    text-align:left;
-    margin:15px 0;
-}
-
-.bubble{
-    padding:10px 12px;
-    border-radius:13px;
-    margin:7px 0;
-    max-width:85%;
-}
-
-.male{
-    background:#ffffff18;
-}
-
-/* TOAST */
 
 #toast{
     position:fixed;
-    bottom:18px;
+    z-index:500;
     left:50%;
+    bottom:18px;
     transform:translate(-50%,30px);
     opacity:0;
-    background:#342824;
+    transition:.25s;
+    background:#302522;
     color:white;
-    padding:12px 16px;
+    padding:13px 17px;
     border-radius:12px;
-    z-index:300;
-    transition:.2s;
     max-width:90%;
     text-align:center;
 }
@@ -520,15 +422,66 @@ main{
     transform:translate(-50%,0);
 }
 
+/* FAKE CALL */
+
+#fakeCall{
+    position:fixed;
+    inset:0;
+    z-index:100;
+    background:linear-gradient(150deg,#29232e,#080808);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:15px;
+}
+
+.callCard{
+    width:min(500px,95vw);
+}
+
+.callAvatar{
+    width:95px;
+    height:95px;
+    border-radius:50%;
+    background:white;
+    color:#333;
+    display:grid;
+    place-items:center;
+    margin:auto;
+    font-size:45px;
+}
+
+.conversation{
+    height:230px;
+    overflow:auto;
+    background:#ffffff10;
+    border-radius:15px;
+    padding:12px;
+    text-align:left;
+    margin:15px 0;
+}
+
+.bubble{
+    background:#ffffff16;
+    padding:10px;
+    border-radius:12px;
+    margin:7px 0;
+}
+
 @media(max-width:850px){
-    .grid,
-    .help-grid{
+    .grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .helpGrid{
         grid-template-columns:1fr 1fr;
     }
 }
 
 @media(max-width:560px){
-    .home-grid{
+    .homeGrid{
         grid-template-columns:1fr;
     }
 
@@ -536,12 +489,8 @@ main{
         grid-template-columns:1fr 1fr;
     }
 
-    .actions{
+    .two{
         grid-template-columns:1fr;
-    }
-
-    .help-grid{
-        grid-template-columns:1fr 1fr;
     }
 }
 </style>
@@ -549,441 +498,812 @@ main{
 
 <body>
 
-<!-- SPLASH -->
+<!-- =========================
+     SPLASH
+========================= -->
 
 <div id="splash">
-    <div>
-        <h1>SHE-SHIELD</h1>
+    <div style="text-align:center">
+        <h1 style="color:#c9a227;letter-spacing:3px">
+            SHE-SHIELD
+        </h1>
         <p>YOUR SAFETY, OUR PRIORITY</p>
     </div>
 </div>
 
+
 <div id="app" class="hidden">
 
 <header>
-    <button class="nav-btn" id="backBtn">‹</button>
-    <div class="logo-text">SHE-SHIELD</div>
-    <button class="nav-btn" id="homeBtn">⌂</button>
+
+<button id="backButton" class="nav">
+‹
+</button>
+
+<div class="logo">
+SHE-SHIELD
+</div>
+
+<button id="homeButton" class="nav">
+⌂
+</button>
+
 </header>
+
 
 <main>
 
-<!-- HOME -->
+
+<!-- =========================
+     HOME
+========================= -->
 
 <section id="home" class="page active">
 
 <div class="hero">
-    <h1>SHE-SHIELD</h1>
-    <p>Smart Personal Safety & Emergency Assistance</p>
-</div>
 
-<div class="home-grid">
+<h1>SHE-SHIELD</h1>
 
-<button class="home-card emergency" data-page="emergency">
-    <span class="home-icon">🚨</span>
-    <h2>Emergency SOS</h2>
-    <p>Full emergency protection</p>
-</button>
-
-<button class="home-card safe" data-page="safe">
-    <span class="home-icon">🕐</span>
-    <h2>Safe Time</h2>
-    <p>All safety features</p>
-</button>
+<p>
+Smart Women Safety & Emergency Protection
+</p>
 
 </div>
+
+
+<div class="homeGrid">
+
+<button
+class="homeButton emergency"
+data-page="emergency">
+
+<div class="homeIcon">
+🚨
+</div>
+
+<h2>
+Emergency SOS
+</h2>
+
+<p>
+One press activates complete emergency protection.
+</p>
+
+</button>
+
+
+<button
+class="homeButton safe"
+data-page="safe">
+
+<div class="homeIcon">
+🕐
+</div>
+
+<h2>
+Safe Time
+</h2>
+
+<p>
+Access all additional safety tools.
+</p>
+
+</button>
+
+</div>
+
 </section>
 
 
-<!-- EMERGENCY -->
+<!-- =========================
+     EMERGENCY
+========================= -->
 
 <section id="emergency" class="page">
 
-<div class="head">
-<span class="tag">EMERGENCY</span>
-<h2>Emergency SOS</h2>
-<p>One press activates the complete emergency workflow.</p>
+<div class="title">
+
+<span>EMERGENCY</span>
+
+<h2>
+Emergency SOS
+</h2>
+
+<p>
+There are NO extra buttons inside Emergency SOS.
+Press the button once.
+</p>
+
 </div>
+
 
 <div class="panel">
 
 <div class="status">
-<span id="emergencyDot" class="dot"></span>
+
+<div
+id="emergencyDot"
+class="statusDot">
+</div>
 
 <div>
-<b id="emergencyState">Emergency inactive</b>
+
+<b id="emergencyStatus">
+Emergency inactive
+</b>
+
 <br>
-<small id="emergencySub">Ready</small>
-</div>
+
+<small id="emergencyReason">
+Ready
+</small>
 
 </div>
 
-<button id="emergencyBtn" class="sos">
-ACTIVATE EMERGENCY SOS
+</div>
+
+
+<button
+id="emergencySOS"
+class="bigSOS">
+
+🚨 ACTIVATE EMERGENCY SOS
+
 </button>
 
-<button id="safeBtn"
-class="btn safe hidden"
-style="width:100%;margin-top:10px">
+
+<button
+id="emergencySafe"
+class="btn green hidden">
+
 I AM SAFE
+
 </button>
 
-<div id="emergencyLocation" class="info hidden"></div>
+
+<div
+id="locationBox"
+class="panel hidden">
+</div>
 
 </div>
 
-<div class="info">
 
-<b>Emergency automatically performs:</b>
+<div class="panel">
+
+<b>
+Emergency automatically performs:
+</b>
 
 <br><br>
 
 🚨 Emergency activation<br>
 📍 Location sharing<br>
-👥 Trusted-contact alert workflow<br>
-🔊 Continuous siren<br>
+👥 Trusted-contact alert<br>
+🔊 Police-style siren<br>
 🔦 Flash attempt<br>
 🎙️ Emergency recording<br>
-📜 History recording
+📜 One History record
 
 </div>
 
 </section>
 
 
-<!-- SAFE TIME -->
+<!-- =========================
+     SAFE TIME
+========================= -->
 
 <section id="safe" class="page">
 
-<div class="head">
+<div class="title">
 
-<span class="tag">SAFETY TOOLS</span>
+<span>SAFETY CENTRE</span>
 
-<h2>Safe Time</h2>
+<h2>
+Safe Time
+</h2>
 
-<p>Choose the safety feature you need.</p>
+<p>
+Choose the safety feature you need.
+</p>
 
 </div>
 
+
 <div class="grid">
 
-<button class="card" data-page="contacts">
-<div class="card-icon">👥</div>
+
+<button
+class="feature"
+data-page="contacts">
+
+<div class="featureIcon">👥</div>
+
 <h3>Trusted Contacts</h3>
-<p>Save your own five trusted people.</p>
+
+<p>
+Save up to five trusted people.
+</p>
+
 </button>
 
-<button class="card" id="silentSOS">
-<div class="card-icon">🤫</div>
+
+<button
+class="feature"
+id="silentSOS">
+
+<div class="featureIcon">🤫</div>
+
 <h3>Silent SOS</h3>
-<p>Location and alert without siren.</p>
+
+<p>
+Share location silently.
+</p>
+
 </button>
 
-<button class="card" data-page="voice">
-<div class="card-icon">🎙️</div>
+
+<button
+class="feature"
+data-page="voice">
+
+<div class="featureIcon">🎙️</div>
+
 <h3>Voice SOS</h3>
-<p>PHONE = full SOS. MOBILE = silent.</p>
+
+<p>
+PHONE = emergency.
+MOBILE = silent.
+</p>
+
 </button>
 
-<button class="card" data-page="auto">
-<div class="card-icon">⏱️</div>
+
+<button
+class="feature"
+data-page="autoSOS">
+
+<div class="featureIcon">⏱️</div>
+
 <h3>Auto SOS</h3>
-<p>10 second emergency timer.</p>
+
+<p>
+10 second safety countdown.
+</p>
+
 </button>
 
-<button class="card" data-page="battery">
-<div class="card-icon">🔋</div>
+
+<button
+class="feature"
+data-page="battery">
+
+<div class="featureIcon">🔋</div>
+
 <h3>Low Battery</h3>
-<p>10% warning.</p>
+
+<p>
+Battery warning at 10%.
+</p>
+
 </button>
 
-<button class="card" data-page="journey">
-<div class="card-icon">🗺️</div>
+
+<button
+class="feature"
+data-page="journey">
+
+<div class="featureIcon">🗺️</div>
+
 <h3>Safe Journey</h3>
-<p>From → To → arrival time.</p>
+
+<p>
+From, To and arrival time.
+</p>
+
 </button>
 
-<button class="card" data-page="capture">
-<div class="card-icon">📸</div>
+
+<button
+class="feature"
+data-page="capture">
+
+<div class="featureIcon">📸</div>
+
 <h3>Capture</h3>
-<p>Capture evidence and save to History.</p>
+
+<p>
+Save evidence to History.
+</p>
+
 </button>
 
-<button class="card" data-page="siren">
-<div class="card-icon">🔊</div>
+
+<button
+class="feature"
+data-page="siren">
+
+<div class="featureIcon">🔊</div>
+
 <h3>Siren</h3>
-<p>Start and stop.</p>
+
+<p>
+Police-style emergency siren.
+</p>
+
 </button>
 
-<button class="card" data-page="fakecall">
-<div class="card-icon">📞</div>
+
+<button
+class="feature"
+data-page="fakeCall">
+
+<div class="featureIcon">📞</div>
+
 <h3>Fake Call</h3>
-<p>Male voice, maximum 5 minutes.</p>
+
+<p>
+Human-like male voice.
+</p>
+
 </button>
 
-<button class="card" data-page="offline">
-<div class="card-icon">📡</div>
+
+<button
+class="feature"
+data-page="offline">
+
+<div class="featureIcon">📡</div>
+
 <h3>Offline Emergency</h3>
-<p>Prepare emergency SMS.</p>
+
+<p>
+Prepare emergency SMS.
+</p>
+
 </button>
 
-<button class="card" data-page="escalation">
-<div class="card-icon">🚨</div>
+
+<button
+class="feature"
+data-page="escalation">
+
+<div class="featureIcon">🚨</div>
+
 <h3>Emergency Escalation</h3>
-<p>Trusted-contact order.</p>
+
+<p>
+Trusted contact order.
+</p>
+
 </button>
 
-<button class="card" data-page="commuter">
-<div class="card-icon">🚗</div>
+
+<button
+class="feature"
+data-page="commuter">
+
+<div class="featureIcon">🚗</div>
+
 <h3>Commuter Issues</h3>
-<p>Select what happened.</p>
+
+<p>
+Report a safety issue.
+</p>
+
 </button>
 
-<button class="card" data-page="helpline">
-<div class="card-icon">📞</div>
+
+<button
+class="feature"
+data-page="helpline">
+
+<div class="featureIcon">📞</div>
+
 <h3>Helpline</h3>
-<p>100, 102, 181, 112.</p>
+
+<p>
+100, 108, 181, 112.
+</p>
+
 </button>
 
-<button class="card" data-page="help">
-<div class="card-icon">📖</div>
+
+<button
+class="feature"
+data-page="help">
+
+<div class="featureIcon">📖</div>
+
 <h3>Help & Safety</h3>
-<p>Instructions and safety tips.</p>
+
+<p>
+Instructions and safety tips.
+</p>
+
 </button>
 
-<button class="card" data-page="history">
-<div class="card-icon">📜</div>
+
+<button
+class="feature"
+data-page="history">
+
+<div class="featureIcon">📜</div>
+
 <h3>History</h3>
-<p>Automatic event records.</p>
+
+<p>
+All events stored neatly.
+</p>
+
 </button>
+
 
 </div>
 
 </section>
 
 
-<!-- TRUSTED CONTACTS -->
+<!-- =========================
+     CONTACTS
+========================= -->
 
 <section id="contacts" class="page">
 
-<div class="head">
-<span class="tag">TRUSTED CONTACTS</span>
-<h2>Trusted Contacts</h2>
-<p>Save the people YOU want to receive emergency alerts.</p>
+<div class="title">
+
+<span>TRUSTED CONTACTS</span>
+
+<h2>
+Your Trusted People
+</h2>
+
+<p>
+These are the people who will receive the emergency alert.
+</p>
+
 </div>
 
-<div class="panel form">
+
+<div class="panel">
 
 <label>
-Name
-<input id="contactName" placeholder="Contact name">
+Contact Name
+
+<input
+id="contactName"
+placeholder="Example: Amma">
+
 </label>
+
 
 <label>
-Phone
-<input id="contactPhone" type="tel" placeholder="+91XXXXXXXXXX">
+Phone Number
+
+<input
+id="contactPhone"
+type="tel"
+placeholder="+91XXXXXXXXXX">
+
 </label>
 
-<button id="addContact" class="btn primary">
-ADD TRUSTED CONTACT
+
+<button
+id="saveContact"
+class="btn primary">
+
+SAVE TRUSTED CONTACT
+
 </button>
 
 </div>
+
 
 <div id="contactsList"></div>
 
 </section>
 
 
-<!-- VOICE -->
+<!-- =========================
+     VOICE
+========================= -->
 
 <section id="voice" class="page">
 
-<div class="head">
-<span class="tag">VOICE SOS</span>
-<h2>Voice Safety</h2>
-<p>Keep this screen open while testing voice recognition.</p>
-</div>
+<div class="title">
 
-<div class="info">
+<span>VOICE SAFETY</span>
 
-<b>Say "PHONE"</b>
+<h2>
+Voice SOS
+</h2>
 
-<br>
-Full emergency:
-<br>
-🚨 Siren
-<br>
-📍 Location
-<br>
-👥 Trusted-contact alert
-<br>
-🔦 Flash attempt
-<br>
-🎙️ Recording
-
-<br><br>
-
-<b>Say "MOBILE"</b>
-
-<br>
-Silent emergency:
-<br>
-📍 Location
-<br>
-👥 Trusted-contact alert
-<br>
-📜 History
-<br>
-No siren / no flash
+<p>
+Start listening and keep the page open.
+</p>
 
 </div>
 
-<div class="actions">
 
-<button id="voiceStart" class="btn primary">
-START VOICE LISTENING
-</button>
+<div class="panel">
 
-<button id="voiceStop" class="btn danger">
-STOP LISTENING
-</button>
-
-</div>
-
-<div id="voiceStatus" class="info">
-Voice listening OFF.
-</div>
-
-</section>
-
-
-<!-- AUTO SOS -->
-
-<section id="auto" class="page">
-
-<div class="head">
-<span class="tag">AUTO SOS</span>
-<h2>10 Second Auto SOS</h2>
-<p>If I AM SAFE is not pressed, emergency starts.</p>
-</div>
-
-<div id="count" class="count">10</div>
-
-<button id="autoStart"
-class="btn primary"
-style="width:100%">
-START COUNTDOWN
-</button>
-
-<button id="autoSafe"
-class="btn safe"
-style="width:100%;margin-top:10px">
-I AM SAFE
-</button>
-
-<div id="autoStatus" class="info">
-Countdown stopped.
-</div>
-
-</section>
-
-
-<!-- BATTERY -->
-
-<section id="battery" class="page">
-
-<div class="head">
-<span class="tag">LOW BATTERY</span>
-<h2>Battery Safety</h2>
-<p>Low battery warning at 10%.</p>
-</div>
-
-<div class="panel" style="text-align:center">
-
-<b id="batteryValue" style="font-size:50px">
-—
+<b>
+Say "PHONE"
 </b>
 
 <br>
 
-<span id="batteryStatus">
-Checking…
-</span>
+→ Full emergency
+
+<br><br>
+
+<b>
+Say "MOBILE"
+</b>
+
+<br>
+
+→ Silent emergency
 
 </div>
 
-<button id="batteryCheck"
-class="btn primary"
-style="width:100%">
+
+<div class="two">
+
+<button
+id="startVoice"
+class="btn primary">
+
+🎙️ START LISTENING
+
+</button>
+
+
+<button
+id="stopVoice"
+class="btn">
+
+STOP LISTENING
+
+</button>
+
+</div>
+
+
+<div
+id="voiceStatus"
+class="panel">
+
+Voice OFF.
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     AUTO SOS
+========================= -->
+
+<section id="autoSOS" class="page">
+
+<div class="title">
+
+<span>AUTOMATIC PROTECTION</span>
+
+<h2>
+Auto SOS
+</h2>
+
+<p>
+You have 10 seconds to confirm that you are safe.
+</p>
+
+</div>
+
+
+<div
+id="autoCount"
+class="count">
+
+10
+
+</div>
+
+
+<button
+id="startAuto"
+class="btn primary">
+
+START 10 SECOND COUNTDOWN
+
+</button>
+
+
+<button
+id="stopAuto"
+class="btn green">
+
+I AM SAFE — STOP COUNTDOWN
+
+</button>
+
+
+<div
+id="autoStatus"
+class="panel">
+
+Countdown stopped.
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     BATTERY
+========================= -->
+
+<section id="battery" class="page">
+
+<div class="title">
+
+<span>BATTERY SAFETY</span>
+
+<h2>
+Low Battery Protection
+</h2>
+
+<p>
+The system checks for 10% battery.
+</p>
+
+</div>
+
+
+<div
+class="panel"
+style="text-align:center">
+
+<div
+id="batteryNumber"
+style="font-size:60px;font-weight:900;color:#c9a227">
+
+—
+
+</div>
+
+<div id="batteryText">
+Checking battery…
+</div>
+
+</div>
+
+
+<button
+id="checkBattery"
+class="btn primary">
+
 CHECK BATTERY
+
 </button>
 
 </section>
 
 
-<!-- SAFE JOURNEY -->
+<!-- =========================
+     JOURNEY
+========================= -->
 
 <section id="journey" class="page">
 
-<div class="head">
-<span class="tag">SAFE JOURNEY</span>
-<h2>Safe Journey</h2>
-<p>Enter your destination and expected arrival time.</p>
+<div class="title">
+
+<span>SAFE JOURNEY</span>
+
+<h2>
+Safe Journey
+</h2>
+
+<p>
+Tell She-Shield where you are going.
+</p>
+
 </div>
 
-<div class="panel form">
+
+<div class="panel">
 
 <label>
 FROM
-<input id="journeyFrom" placeholder="Starting location">
+
+<input
+id="fromPlace"
+placeholder="Starting location">
+
 </label>
+
 
 <label>
 TO
-<input id="journeyTo" placeholder="Destination">
+
+<input
+id="toPlace"
+placeholder="Destination">
+
 </label>
+
 
 <label>
 EXPECTED ARRIVAL
-<input id="journeyArrival" type="datetime-local">
+
+<input
+id="arrivalTime"
+type="datetime-local">
+
 </label>
 
-<button id="journeyStart"
+
+<button
+id="startJourney"
 class="btn primary">
+
 START SAFE JOURNEY
+
 </button>
 
-<button id="routeBtn"
+
+<button
+id="openRoute"
 class="btn">
+
 OPEN GOOGLE MAPS ROUTE
+
 </button>
 
 </div>
 
-<div id="journeyStatus" class="info">
+
+<div
+id="journeyStatus"
+class="panel">
+
 No journey active.
+
 </div>
 
-<div id="journeyQuestion"
+
+<div
+id="arrivalQuestion"
 class="panel hidden">
 
-<h2>⚠️ Are you safe?</h2>
+<h2>
+⚠️ ARE YOU SAFE?
+</h2>
 
-<p id="journeyRemaining">
-60 seconds remaining.
+<p id="arrivalCountdown">
+60 seconds remaining
 </p>
 
-<div class="actions">
 
-<button id="journeySafe"
-class="btn safe">
+<div class="two">
+
+<button
+id="journeySafe"
+class="btn green">
+
 I AM SAFE
+
 </button>
 
-<button id="journeyDanger"
+
+<button
+id="journeyDanger"
 class="btn danger">
+
 I AM IN DANGER
+
 </button>
 
 </div>
@@ -993,19 +1313,31 @@ I AM IN DANGER
 </section>
 
 
-<!-- CAPTURE -->
+<!-- =========================
+     CAPTURE
+========================= -->
 
 <section id="capture" class="page">
 
-<div class="head">
-<span class="tag">CAPTURE</span>
-<h2>Capture Evidence</h2>
-<p>Captured photos are automatically stored in History.</p>
+<div class="title">
+
+<span>EVIDENCE</span>
+
+<h2>
+Capture Photo
+</h2>
+
+<p>
+Photos are saved automatically to History.
+</p>
+
 </div>
+
 
 <div class="camera">
 
-<video id="cameraVideo"
+<video
+id="camera"
 autoplay
 playsinline
 muted>
@@ -1013,208 +1345,365 @@ muted>
 
 </div>
 
-<div class="actions">
 
-<button id="cameraOpen"
+<button
+id="openCamera"
 class="btn primary">
+
 OPEN CAMERA
+
 </button>
 
-<button id="cameraCapture"
+
+<button
+id="takePhoto"
 class="btn">
+
 CAPTURE PHOTO
+
 </button>
 
-<button id="cameraClose"
-class="btn danger">
+
+<button
+id="closeCamera"
+class="btn">
+
 CLOSE CAMERA
+
 </button>
 
-</div>
 
-<canvas id="cameraCanvas"
+<canvas
+id="canvas"
 class="hidden">
 </canvas>
 
-<div id="cameraStatus" class="info">
+
+<div
+id="cameraStatus"
+class="panel">
+
 Camera closed.
+
 </div>
 
 </section>
 
 
-<!-- SIREN -->
+<!-- =========================
+     SIREN
+========================= -->
 
 <section id="siren" class="page">
 
-<div class="head">
-<span class="tag">SIREN</span>
-<h2>Emergency Siren</h2>
+<div class="title">
+
+<span>EMERGENCY SOUND</span>
+
+<h2>
+Police Siren
+</h2>
+
+<p>
+High-low emergency siren pattern.
+</p>
+
 </div>
 
-<div id="sirenVisual" class="siren">
-🔊
+
+<div
+id="sirenVisual"
+class="sirenBox">
+
+🚨
+
 </div>
 
-<div class="actions">
 
-<button id="sirenStart"
+<div class="two">
+
+<button
+id="startSiren"
 class="btn primary">
-START SIREN
+
+🔊 START SIREN
+
 </button>
 
-<button id="sirenStop"
+
+<button
+id="stopSiren"
 class="btn danger">
-STOP SIREN
+
+🛑 STOP SIREN
+
 </button>
 
 </div>
 
-<div id="sirenStatus"
-class="info">
+
+<div
+id="sirenStatus"
+class="panel">
+
 Siren OFF.
+
 </div>
 
 </section>
 
 
-<!-- FAKE CALL -->
+<!-- =========================
+     FAKE CALL
+========================= -->
 
-<section id="fakecall" class="page">
+<section id="fakeCall" class="page">
 
-<div class="head">
-<span class="tag">DISCREET SAFETY</span>
-<h2>Fake Call</h2>
-<p>Human-like male voice conversation.</p>
+<div class="title">
+
+<span>DISCREET SAFETY</span>
+
+<h2>
+Fake Call
+</h2>
+
+<p>
+A male-style voice speaks like a normal call.
+</p>
+
 </div>
 
-<button id="fakeCallStart"
-class="btn primary"
-style="width:100%">
-START 5-MINUTE FAKE CALL
+
+<button
+id="startFakeCall"
+class="btn primary">
+
+📞 START FAKE CALL
+
 </button>
 
-<div class="info">
 
-The call behaves like a normal conversation.
+<div class="panel">
 
-<br><br>
-
-If <b>STOP CALL</b> is not pressed before 5 minutes:
+The maximum call duration is 5 minutes.
 
 <br><br>
 
-🚨 Full emergency starts automatically.
+If STOP CALL is not pressed before 5 minutes,
+She-Shield starts the full emergency workflow.
 
 </div>
 
 </section>
 
 
-<!-- OFFLINE -->
+<!-- =========================
+     OFFLINE
+========================= -->
 
 <section id="offline" class="page">
 
-<div class="head">
-<span class="tag">OFFLINE EMERGENCY</span>
-<h2>Offline Emergency</h2>
-<p>Prepare an emergency SMS using cellular service.</p>
+<div class="title">
+
+<span>OFFLINE SAFETY</span>
+
+<h2>
+Offline Emergency
+</h2>
+
+<p>
+Prepare an emergency SMS using your phone network.
+</p>
+
 </div>
 
-<button id="offlineStart"
-class="btn primary"
-style="width:100%">
-PREPARE EMERGENCY SMS
+
+<button
+id="offlineButton"
+class="btn primary">
+
+📡 PREPARE EMERGENCY SMS
+
 </button>
 
-<div id="offlineStatus" class="info">
-No SMS prepared.
+
+<div
+id="offlineResult"
+class="panel">
+
+No emergency message prepared.
+
 </div>
 
 </section>
 
 
-<!-- ESCALATION -->
+<!-- =========================
+     ESCALATION
+========================= -->
 
 <section id="escalation" class="page">
 
-<div class="head">
-<span class="tag">ESCALATION</span>
-<h2>Emergency Escalation</h2>
-<p>Trusted contacts are processed in saved order.</p>
+<div class="title">
+
+<span>ESCALATION</span>
+
+<h2>
+Emergency Escalation
+</h2>
+
+<p>
+Contacts are processed in saved order.
+</p>
+
 </div>
+
 
 <div id="escalationList"></div>
 
-<button id="escalationStart"
+
+<button
+id="startEscalation"
 class="btn primary">
+
 START ESCALATION
+
 </button>
 
-<div id="escalationStatus"
-class="info">
+
+<div
+id="escalationStatus"
+class="panel">
+
 Not active.
+
 </div>
 
 </section>
 
 
-<!-- COMMUTER -->
+<!-- =========================
+     COMMUTER
+========================= -->
 
 <section id="commuter" class="page">
 
-<div class="head">
-<span class="tag">COMMUTER SAFETY</span>
-<h2>What happened?</h2>
-<p>Select the problem you experienced.</p>
+<div class="title">
+
+<span>COMMUTER SAFETY</span>
+
+<h2>
+What Happened?
+</h2>
+
+<p>
+Tap the issue you faced.
+</p>
+
 </div>
 
-<div id="issueGrid" class="grid"></div>
 
-<div id="issueStatus" class="info">
+<div
+id="issueList"
+class="grid">
+</div>
+
+
+<div
+id="issueStatus"
+class="panel">
+
 No issue selected.
+
 </div>
 
 </section>
 
 
-<!-- HELPLINE -->
+<!-- =========================
+     HELPLINES
+========================= -->
 
 <section id="helpline" class="page">
 
-<div class="head">
-<span class="tag">HELPLINE</span>
-<h2>Emergency Numbers</h2>
+<div class="title">
+
+<span>EMERGENCY HELP</span>
+
+<h2>
+Helplines
+</h2>
+
 </div>
 
-<div class="help-grid">
 
-<a class="help" href="tel:100">
+<div class="helpGrid">
+
+<a
+class="help"
+href="tel:100">
+
 🚓
+
 <br>
+
 Police
-<strong>100</strong>
+
+<strong>
+100
+</strong>
+
 </a>
 
-<a class="help" href="tel:102">
+
+<a
+class="help"
+href="tel:108">
+
 🚑
+
 <br>
+
 Ambulance
-<strong>102</strong>
+
+<strong>
+108
+</strong>
+
 </a>
 
-<a class="help" href="tel:181">
+
+<a
+class="help"
+href="tel:181">
+
 👩
+
 <br>
+
 Women Helpline
-<strong>181</strong>
+
+<strong>
+181
+</strong>
+
 </a>
 
-<a class="help" href="tel:112">
+
+<a
+class="help"
+href="tel:112">
+
 🚨
+
 <br>
+
 Emergency
-<strong>112</strong>
+
+<strong>
+112
+</strong>
+
 </a>
 
 </div>
@@ -1222,90 +1711,137 @@ Emergency
 </section>
 
 
-<!-- HELP -->
+<!-- =========================
+     HELP
+========================= -->
 
 <section id="help" class="page">
 
-<div class="head">
-<span class="tag">GUIDANCE</span>
-<h2>Help & Safety</h2>
+<div class="title">
+
+<span>GUIDANCE</span>
+
+<h2>
+Help & Safety
+</h2>
+
 </div>
 
-<div class="actions">
 
-<button id="instructions"
+<div class="two">
+
+<button
+id="instructions"
 class="btn primary">
+
 APP INSTRUCTIONS
+
 </button>
 
-<button id="tips"
+
+<button
+id="safetyTips"
 class="btn">
+
 SAFETY TIPS
+
 </button>
 
 </div>
 
-<div id="helpResult"
-class="info">
+
+<div
+id="helpResult"
+class="panel">
+
 Choose an option.
+
 </div>
 
 </section>
 
 
-<!-- HISTORY -->
+<!-- =========================
+     HISTORY
+========================= -->
 
 <section id="history" class="page">
 
-<div class="head">
-<span class="tag">RECORDS</span>
-<h2>History</h2>
-<p>Every event is stored once.</p>
+<div class="title">
+
+<span>RECORDS</span>
+
+<h2>
+History
+</h2>
+
+<p>
+Each event is recorded only once.
+</p>
+
 </div>
+
 
 <div id="historyList"></div>
 
 </section>
 
+
 </main>
+
 </div>
 
 
-<!-- FAKE CALL SCREEN -->
+<!-- =========================
+     FAKE CALL OVERLAY
+========================= -->
 
-<div id="fakeCall" class="hidden">
+<div
+id="fakeCallOverlay"
+class="hidden">
 
-<div class="call-box">
+<div class="callCard">
 
-<div class="call-avatar">
+<div class="callAvatar">
 👨
 </div>
 
-<h2>Incoming Call</h2>
+<h2>
+Incoming Call
+</h2>
 
-<p>Private Contact</p>
+<p>
+Private Contact
+</p>
 
-<div id="callTimer">
+
+<div id="fakeTimer">
 00:00 / 05:00
 </div>
 
-<div id="conversation"
+
+<div
+id="conversation"
 class="conversation">
 </div>
 
-<div class="actions">
 
-<button id="callContinue"
+<button
+id="continueCall"
 class="btn">
-🔊 Continue
+
+🔊 Continue Conversation
+
 </button>
 
-<button id="callStop"
+
+<button
+id="stopCall"
 class="btn danger">
-STOP CALL
-</button>
 
-</div>
+STOP CALL
+
+</button>
 
 </div>
 
@@ -1317,130 +1853,176 @@ STOP CALL
 
 <script>
 
-"use strict";
+/* =====================================================
+   SHE-SHIELD
+   MAIN APPLICATION
+===================================================== */
 
-/* =========================
-   DATABASE
-========================= */
 
-const STORAGE_KEY="SHE_SHIELD_SIH";
+/* ===============================
+   LOCAL STORAGE
+================================ */
 
-let data=JSON.parse(
-localStorage.getItem(STORAGE_KEY)
-||
-JSON.stringify({
-    contacts:[],
-    history:[],
-    eventKeys:{}
-})
-);
+const STORAGE_KEY="SHE_SHIELD_DATA";
 
-data.contacts=data.contacts||[];
-data.history=data.history||[];
-data.eventKeys=data.eventKeys||{};
 
-function saveData(){
+let data;
+
+try{
+
+    data=
+    JSON.parse(
+        localStorage.getItem(
+            STORAGE_KEY
+        )
+    ) || {};
+
+}catch(error){
+
+    data={};
+
+}
+
+
+data.contacts=data.contacts || [];
+data.history=data.history || [];
+data.events=data.events || {};
+
+function save(){
+
     localStorage.setItem(
         STORAGE_KEY,
         JSON.stringify(data)
     );
+
 }
 
-/* =========================
-   VARIABLES
-========================= */
 
-let navigation=["home"];
+/* ===============================
+   GLOBAL VARIABLES
+================================ */
 
-let emergencyActive=false;
+let pages=["home"];
+
+let emergencyRunning=false;
+
 let emergencyID=null;
 
-let motionHandler=null;
+let sirenOscillator=null;
+
+let sirenGain=null;
+
+let audioContext=null;
+
+let flashStream=null;
+
+let flashTimer=null;
+
+let recorder=null;
+
+let recordingStream=null;
+
+let motionStarted=false;
+
 let lastShake=0;
 
-let recognition=null;
-let lastVoiceTrigger=0;
+let voiceRecognition=null;
 
-let autoTimer=null;
+let lastVoice=0;
 
-let journeyTimer=null;
-let journeyQuestionTimer=null;
-let journeySeconds=60;
+let autoInterval=null;
+
+let journeyTimeout=null;
+
+let arrivalInterval=null;
+
+let arrivalSeconds=60;
 
 let cameraStream=null;
 
-let recorder=null;
-let recordingStream=null;
+let fakeCallInterval=null;
 
-let audioContext=null;
-let sirenOscillator=null;
-let sirenGain=null;
+let fakeCallSeconds=0;
 
-let flashStream=null;
-let flashTimer=null;
+let fakeLineIndex=0;
 
-let fakeTimer=null;
-let fakeSeconds=0;
-let fakeLine=0;
-
-let escalationTimer=null;
+let escalationInterval=null;
 
 
-/* =========================
-   HELPERS
-========================= */
+/* ===============================
+   SHORTCUT
+================================ */
 
-function $(id){
+function get(id){
+
     return document.getElementById(id);
-}
 
-function showToast(message){
-
-    const toast=$("toast");
-
-    toast.textContent=message;
-
-    toast.classList.add("show");
-
-    clearTimeout(toast.timer);
-
-    toast.timer=setTimeout(()=>{
-        toast.classList.remove("show");
-    },2600);
-}
-
-function escapeHTML(value){
-
-    return String(value).replace(
-        /[&<>"']/g,
-        character=>({
-            "&":"&amp;",
-            "<":"&lt;",
-            ">":"&gt;",
-            '"':"&quot;",
-            "'":"&#39;"
-        }[character])
-    );
 }
 
 
-/* =========================
+/* ===============================
+   TOAST
+================================ */
+
+function toast(message){
+
+    const box=get("toast");
+
+    box.textContent=message;
+
+    box.classList.add("show");
+
+    clearTimeout(box.timer);
+
+    box.timer=
+    setTimeout(()=>{
+
+        box.classList.remove("show");
+
+    },2800);
+
+}
+
+
+/* ===============================
+   ESCAPE HTML
+================================ */
+
+function safeText(text){
+
+    return String(text)
+    .replace(/[&<>"']/g,char=>({
+
+        "&":"&amp;",
+        "<":"&lt;",
+        ">":"&gt;",
+        '"':"&quot;",
+        "'":"&#39;"
+
+    }[char]));
+
+}
+
+
+/* ===============================
    HISTORY
-========================= */
+================================ */
 
-function addHistory(
-    key,
+function recordEvent(
+    uniqueKey,
     type,
     details,
     location=null,
     image=null
 ){
 
-    if(data.eventKeys[key]){
+    if(data.events[uniqueKey]){
+
         return false;
+
     }
 
-    data.eventKeys[key]=true;
+    data.events[uniqueKey]=true;
 
     data.history.unshift({
 
@@ -1448,9 +2030,9 @@ function addHistory(
 
         details:details,
 
-        time:new Date().toLocaleString(
-            "en-IN"
-        ),
+        time:
+        new Date()
+        .toLocaleString("en-IN"),
 
         location:location,
 
@@ -1458,176 +2040,232 @@ function addHistory(
 
     });
 
-    data.history=
-        data.history.slice(0,150);
 
-    saveData();
+    if(data.history.length>200){
+
+        data.history=
+        data.history.slice(0,200);
+
+    }
+
+
+    save();
 
     renderHistory();
 
     return true;
+
 }
 
 
 function renderHistory(){
 
-    const container=$("historyList");
+    const list=get(
+        "historyList"
+    );
+
 
     if(data.history.length===0){
 
-        container.innerHTML=
-            '<div class="info">No history yet.</div>';
+        list.innerHTML=
+        `
+        <div class="panel">
+        No history yet.
+        </div>
+        `;
 
         return;
+
     }
 
-    container.innerHTML=
-        data.history.map(item=>{
 
-            let locationHTML="";
+    list.innerHTML=
+    data.history
+    .map(item=>{
 
-            if(item.location){
+        let location="";
 
-                locationHTML=`
+        if(item.location){
 
-                <p>
-                📍
-                ${item.location.lat.toFixed(6)},
-                ${item.location.lon.toFixed(6)}
+            location=
+            `
+            <p>
+            📍
+            ${item.location.lat.toFixed(6)},
+            ${item.location.lon.toFixed(6)}
 
-                <br>
+            <br>
 
-                <a
-                target="_blank"
-                href="https://www.google.com/maps?q=${item.location.lat},${item.location.lon}">
-                Open Location
-                </a>
+            <a
+            target="_blank"
+            href="https://www.google.com/maps?q=${item.location.lat},${item.location.lon}">
+            Open Google Maps
+            </a>
 
-                </p>
-
-                `;
-            }
-
-            let imageHTML="";
-
-            if(item.image){
-
-                imageHTML=`
-
-                <img
-                src="${item.image}"
-                alt="Captured evidence">
-
-                `;
-            }
-
-            return `
-
-            <div class="history">
-
-                <h3>
-                ${escapeHTML(item.type)}
-                </h3>
-
-                <small>
-                ${escapeHTML(item.time)}
-                </small>
-
-                <p>
-                ${escapeHTML(item.details)}
-                </p>
-
-                ${locationHTML}
-
-                ${imageHTML}
-
-            </div>
-
+            </p>
             `;
 
-        }).join("");
+        }
+
+
+        let image="";
+
+        if(item.image){
+
+            image=
+            `
+            <img
+            src="${item.image}"
+            alt="Evidence">
+            `;
+
+        }
+
+
+        return `
+
+        <div class="history">
+
+        <h3>
+        ${safeText(item.type)}
+        </h3>
+
+        <small>
+        ${safeText(item.time)}
+        </small>
+
+        <p>
+        ${safeText(item.details)}
+        </p>
+
+        ${location}
+
+        ${image}
+
+        </div>
+
+        `;
+
+    })
+    .join("");
+
 }
 
 
-/* =========================
+/* ===============================
    NAVIGATION
-========================= */
+================================ */
 
-function showPage(
-    pageID,
-    addToNavigation=true
+function openPage(
+    id,
+    add=true
 ){
 
-    const page=$(pageID);
+    if(!get(id)){
 
-    if(!page){
         return;
+
     }
+
 
     const current=
-        document.querySelector(
-            ".page.active"
-        )?.id || "home";
+    document
+    .querySelector(
+        ".page.active"
+    )
+    ?.id;
+
 
     if(
-        addToNavigation &&
-        current!==pageID
+        add &&
+        current!==id
     ){
 
-        navigation=
-            navigation.filter(
-                item=>item!==pageID
-            );
+        pages=
+        pages.filter(
+            page=>page!==id
+        );
 
-        navigation.push(pageID);
+        pages.push(id);
+
     }
+
 
     document
-        .querySelectorAll(".page")
-        .forEach(page=>{
-            page.classList.toggle(
-                "active",
-                page.id===pageID
-            );
-        });
+    .querySelectorAll(
+        ".page"
+    )
+    .forEach(page=>{
 
-    window.scrollTo(0,0);
+        page.classList.toggle(
+            "active",
+            page.id===id
+        );
 
-    if(pageID==="contacts"){
+    });
+
+
+    window.scrollTo(
+        0,
+        0
+    );
+
+
+    if(id==="contacts")
         renderContacts();
-    }
 
-    if(pageID==="history"){
+    if(id==="history")
         renderHistory();
-    }
 
-    if(pageID==="escalation"){
+    if(id==="escalation")
         renderEscalation();
-    }
 
 }
 
 
-/*
-   IMPORTANT:
-   Back goes to previous She-Shield
-   screen, NOT straight home.
-*/
+document
+.querySelectorAll(
+    "[data-page]"
+)
+.forEach(button=>{
 
-$("backBtn").onclick=()=>{
+    button.onclick=()=>{
 
-    if(navigation.length>1){
+        openPage(
+            button.dataset.page
+        );
 
-        navigation.pop();
+    };
 
-        showPage(
-            navigation[navigation.length-1],
+});
+
+
+get("homeButton").onclick=()=>{
+
+    pages=["home"];
+
+    openPage(
+        "home",
+        false
+    );
+
+};
+
+
+get("backButton").onclick=()=>{
+
+    if(pages.length>1){
+
+        pages.pop();
+
+        openPage(
+            pages[pages.length-1],
             false
         );
 
     }else{
 
-        showPage(
+        openPage(
             "home",
             false
         );
@@ -1637,81 +2275,67 @@ $("backBtn").onclick=()=>{
 };
 
 
-$("homeBtn").onclick=()=>{
-
-    navigation=["home"];
-
-    showPage(
-        "home",
-        false
-    );
-
-};
-
-
-document
-.querySelectorAll("[data-page]")
-.forEach(button=>{
-
-    button.addEventListener(
-        "click",
-        ()=>showPage(
-            button.dataset.page
-        )
-    );
-
-});
-
-
-/* =========================
+/* ===============================
    LOCATION
-========================= */
+================================ */
 
-function getLocation(){
+function currentLocation(){
 
     return new Promise(
         (resolve,reject)=>{
 
-            if(!navigator.geolocation){
+            if(
+                !navigator.geolocation
+            ){
 
                 reject(
                     new Error(
-                        "Geolocation unavailable"
+                        "GPS unavailable"
                     )
                 );
 
                 return;
+
             }
 
-            navigator.geolocation.getCurrentPosition(
+
+            navigator
+            .geolocation
+            .getCurrentPosition(
 
                 position=>{
 
                     resolve({
 
                         lat:
-                            position.coords.latitude,
+                        position.coords.latitude,
 
                         lon:
-                            position.coords.longitude,
+                        position.coords.longitude,
 
                         accuracy:
-                            Math.round(
-                                position.coords.accuracy
-                            )
+                        Math.round(
+                            position.coords.accuracy
+                        )
 
                     });
 
                 },
 
-                error=>reject(error),
+                error=>{
+
+                    reject(error);
+
+                },
 
                 {
+
                     enableHighAccuracy:true,
 
                     timeout:12000,
 
                     maximumAge:2000
+
                 }
 
             );
@@ -1722,66 +2346,67 @@ function getLocation(){
 }
 
 
-async function obtainLocation(
+async function shareLocation(
     historyKey
 ){
 
     try{
 
         const location=
-            await getLocation();
+        await currentLocation();
 
-        const mapsURL=
-            `https://www.google.com/maps?q=${location.lat},${location.lon}`;
 
-        $("emergencyLocation")
-            .classList
-            .remove("hidden");
+        const maps=
+        `https://www.google.com/maps?q=${location.lat},${location.lon}`;
 
-        $("emergencyLocation")
-            .innerHTML=`
 
-            <b>📍 LIVE LOCATION</b>
+        get(
+            "locationBox"
+        )
+        .classList
+        .remove("hidden");
 
-            <br><br>
 
-            Latitude:
-            ${location.lat.toFixed(6)}
+        get(
+            "locationBox"
+        )
+        .innerHTML=
+        `
+        <b>📍 LOCATION SHARED</b>
 
-            <br>
+        <br><br>
 
-            Longitude:
-            ${location.lon.toFixed(6)}
+        ${location.lat.toFixed(6)},
+        ${location.lon.toFixed(6)}
 
-            <br>
+        <br>
 
-            Accuracy:
-            ±${location.accuracy} metres
+        Accuracy:
+        ±${location.accuracy}m
 
-            <br><br>
+        <br><br>
 
-            <a
-            class="btn primary"
-            target="_blank"
-            href="${mapsURL}">
-            OPEN GOOGLE MAPS
-            </a>
+        <a
+        class="btn primary"
+        target="_blank"
+        href="${maps}">
+        OPEN GOOGLE MAPS
+        </a>
+        `;
 
-            `;
 
-        addHistory(
+        recordEvent(
 
             historyKey,
 
             "Location Shared",
 
-            `Location:
-            ${location.lat.toFixed(6)},
-            ${location.lon.toFixed(6)}`,
+            "Emergency location shared.",
 
             location
 
         );
+
 
         return location;
 
@@ -1789,251 +2414,279 @@ async function obtainLocation(
 
     catch(error){
 
-        showToast(
-            "Please allow location permission."
+        toast(
+            "Location permission is required."
         );
 
         return null;
+
     }
 
 }
 
 
-/* =========================
-   TRUSTED CONTACTS
-========================= */
+/* ===============================
+   WHATSAPP ALERT
+================================ */
 
-function renderContacts(){
+/*
+   Browser limitation:
+   WhatsApp does not allow a webpage
+   to silently press SEND.
 
-    const container=$("contactsList");
+   We therefore open WhatsApp with
+   the message already prepared.
+*/
 
-    if(data.contacts.length===0){
+function createEmergencyMessage(
+    reason,
+    location
+){
 
-        container.innerHTML=
-            '<div class="info">No trusted contacts saved.</div>';
+    const maps=
+    location
+    ?
+    `https://www.google.com/maps?q=${location.lat},${location.lon}`
+    :
+    "Location unavailable";
 
-        return;
-    }
 
-    container.innerHTML=
-        data.contacts.map(
-            (contact,index)=>`
+    return `
+🚨 SHE-SHIELD EMERGENCY 🚨
 
-            <div class="contact">
+DANGER. HELP ME IMMEDIATELY.
 
-                <div class="avatar">
-                ${index+1}
-                </div>
+Reason:
+${reason}
 
-                <div>
+Please track my location:
 
-                <b>
-                ${escapeHTML(contact.name)}
-                </b>
+${maps}
 
-                <br>
+This is an emergency alert from She-Shield.
+`;
 
-                <small>
-                ${escapeHTML(contact.phone)}
-                </small>
-
-                </div>
-
-            </div>
-
-            `
-        ).join("");
 }
 
 
-$("addContact").onclick=()=>{
+function openWhatsAppForContact(
+    contact,
+    message
+){
 
-    if(data.contacts.length>=5){
-
-        showToast(
-            "Maximum 5 trusted contacts."
-        );
-
-        return;
-    }
-
-    const name=
-        $("contactName")
-        .value
-        .trim();
-
-    const phone=
-        $("contactPhone")
-        .value
-        .trim();
-
-    if(!name||!phone){
-
-        showToast(
-            "Enter name and phone number."
-        );
-
-        return;
-    }
-
-    data.contacts.push({
-
-        name:name,
-
-        phone:phone
-
-    });
-
-    saveData();
-
-    $("contactName").value="";
-    $("contactPhone").value="";
-
-    renderContacts();
-    renderEscalation();
-
-    showToast(
-        "Trusted contact saved."
+    let phone=
+    contact.phone
+    .replace(
+        /[^0-9]/g,
+        ""
     );
 
-};
+
+    if(
+        phone.startsWith("0")
+    ){
+
+        phone=
+        phone.substring(1);
+
+    }
 
 
-/* =========================
-   TRUSTED CONTACT ALERT
-========================= */
+    if(
+        phone.length===10
+    ){
 
-async function prepareTrustedContactAlert(
+        phone=
+        "91"+phone;
+
+    }
+
+
+    const url=
+    `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}
+
+
+async function alertTrustedContacts(
     reason,
     location,
-    eventID
+    id
 ){
 
     const contacts=
-        data.contacts;
+    data.contacts;
 
-    const maps=
-        location
-        ?
-        `https://www.google.com/maps?q=${location.lat},${location.lon}`
-        :
-        "Location unavailable";
 
     const message=
-        `DANGER. HELP ME IMMEDIATELY. ${reason}. Please track my location: ${maps}`;
+    createEmergencyMessage(
+        reason,
+        location
+    );
 
-    addHistory(
 
-        `trusted-alert-${eventID}`,
+    recordEvent(
 
-        "Trusted Contact Alert",
+        `trusted-alert-${id}`,
 
-        contacts.length>0
+        "Trusted Contacts Alert",
 
+        contacts.length
         ?
-
-        `Emergency alert prepared for
-        ${contacts.length}
-        trusted contact(s). ${message}`
-
+        `${contacts.length} trusted contact(s) prepared for WhatsApp emergency alert.`
         :
-
-        "No trusted contacts saved."
-
-        ,
+        "No trusted contacts saved.",
 
         location
 
     );
 
+
+    if(
+        contacts.length===0
+    ){
+
+        toast(
+            "No trusted contacts saved."
+        );
+
+        return;
+
+    }
+
+
     /*
-       THIS IS THE CONNECTION POINT
-       FOR FIREBASE / PUSH NOTIFICATIONS.
-
-       GitHub Pages itself cannot silently
-       activate another person's phone.
-
-       The UI and event are ready for
-       the communication backend.
+       Open first contact automatically.
+       Additional contacts are available
+       through the contact list.
     */
+
+    openWhatsAppForContact(
+        contacts[0],
+        message
+    );
+
+
+    toast(
+        "WhatsApp emergency message prepared."
+    );
 
 }
 
 
-/* =========================
-   SIREN
-========================= */
+/* ===============================
+   POLICE SIREN
+================================ */
 
-function startSiren(){
+function startPoliceSiren(){
 
     if(sirenOscillator){
+
         return;
+
     }
+
 
     try{
 
         audioContext=
-            audioContext ||
-            new (
-                window.AudioContext ||
-                window.webkitAudioContext
-            )();
+        audioContext ||
+        new(
+            window.AudioContext ||
+            window.webkitAudioContext
+        )();
+
 
         sirenOscillator=
-            audioContext.createOscillator();
+        audioContext
+        .createOscillator();
+
 
         sirenGain=
-            audioContext.createGain();
+        audioContext
+        .createGain();
 
-        sirenOscillator.type="square";
 
-        sirenGain.gain.value=.05;
+        sirenOscillator.type=
+        "sawtooth";
 
-        sirenOscillator.connect(
+
+        sirenGain.gain.value=
+        0.045;
+
+
+        sirenOscillator
+        .connect(
             sirenGain
         );
 
-        sirenGain.connect(
+
+        sirenGain
+        .connect(
             audioContext.destination
         );
 
+
         sirenOscillator.start();
 
-        let high=false;
 
-        sirenOscillator.timer=
-            setInterval(()=>{
+        let rising=true;
 
-                high=!high;
+
+        sirenOscillator.pattern=
+        setInterval(()=>{
+
+            if(rising){
 
                 sirenOscillator
-                    .frequency
-                    .setValueAtTime(
-                        high
-                        ?
-                        1100
-                        :
-                        600,
+                .frequency
+                .linearRampToValueAtTime(
+                    1150,
+                    audioContext.currentTime+0.42
+                );
 
-                        audioContext.currentTime
-                    );
+            }else{
 
-            },250);
+                sirenOscillator
+                .frequency
+                .linearRampToValueAtTime(
+                    550,
+                    audioContext.currentTime+0.42
+                );
 
-        $("sirenVisual")
-            .classList
-            .add("active");
+            }
 
-        $("sirenStatus")
-            .textContent=
-            "Siren ON.";
+            rising=!rising;
+
+        },420);
+
+
+        get(
+            "sirenVisual"
+        )
+        .classList
+        .add("running");
+
+
+        get(
+            "sirenStatus"
+        )
+        .textContent=
+        "POLICE SIREN ACTIVE";
+
 
     }
 
     catch(error){
 
-        showToast(
-            "Tap START SIREN again."
+        toast(
+            "Tap Start Siren once more."
         );
 
     }
@@ -2041,89 +2694,113 @@ function startSiren(){
 }
 
 
-function stopSiren(){
+function stopPoliceSiren(){
 
     if(sirenOscillator){
 
         clearInterval(
-            sirenOscillator.timer
+            sirenOscillator.pattern
         );
 
+
         try{
+
             sirenOscillator.stop();
-        }
-        catch(error){}
+
+        }catch(error){}
+
 
         sirenOscillator=null;
+
     }
 
-    $("sirenVisual")
-        .classList
-        .remove("active");
 
-    $("sirenStatus")
-        .textContent=
-        "Siren OFF.";
+    get(
+        "sirenVisual"
+    )
+    .classList
+    .remove("running");
+
+
+    get(
+        "sirenStatus"
+    )
+    .textContent=
+    "Siren OFF.";
+
 }
 
 
-$("sirenStart").onclick=
-    startSiren;
-
-$("sirenStop").onclick=
-    stopSiren;
+get("startSiren").onclick=
+startPoliceSiren;
 
 
-/* =========================
-   FLASH
-========================= */
+get("stopSiren").onclick=
+stopPoliceSiren;
 
-async function startContinuousFlash(){
+
+/* ===============================
+   FLASHLIGHT
+================================ */
+
+async function startFlash(){
 
     if(
         flashTimer ||
-        !navigator.mediaDevices?.getUserMedia
+        !navigator.mediaDevices
+        ?.getUserMedia
     ){
+
         return;
+
     }
+
 
     try{
 
         flashStream=
-            await navigator.mediaDevices
-            .getUserMedia({
-                video:true
-            });
+        await navigator
+        .mediaDevices
+        .getUserMedia({
+            video:true
+        });
+
 
         const track=
-            flashStream
-            .getVideoTracks()[0];
+        flashStream
+        .getVideoTracks()[0];
+
 
         const capabilities=
-            track.getCapabilities
-            ?
-            track.getCapabilities()
-            :
-            {};
+        track.getCapabilities
+        ?
+        track.getCapabilities()
+        :
+        {};
+
 
         if(!capabilities.torch){
 
             flashStream
-                .getTracks()
-                .forEach(
-                    track=>track.stop()
-                );
+            .getTracks()
+            .forEach(
+                track=>track.stop()
+            );
+
 
             flashStream=null;
 
-            showToast(
-                "This browser does not expose flashlight control."
+            toast(
+                "This browser does not expose torch control."
             );
 
             return;
+
         }
 
+
         let light=true;
+
 
         const pulse=()=>{
 
@@ -2135,25 +2812,29 @@ async function startContinuousFlash(){
                     }
                 ]
 
-            }).catch(()=>{});
+            })
+            .catch(()=>{});
+
 
             light=!light;
 
         };
 
+
         pulse();
 
+
         flashTimer=
-            setInterval(
-                pulse,
-                450
-            );
+        setInterval(
+            pulse,
+            450
+        );
 
     }
 
     catch(error){
 
-        showToast(
+        toast(
             "Flash permission unavailable."
         );
 
@@ -2162,7 +2843,7 @@ async function startContinuousFlash(){
 }
 
 
-function stopContinuousFlash(){
+function stopFlash(){
 
     if(flashTimer){
 
@@ -2171,52 +2852,62 @@ function stopContinuousFlash(){
         );
 
         flashTimer=null;
+
     }
+
 
     if(flashStream){
 
         flashStream
-            .getTracks()
-            .forEach(
-                track=>track.stop()
-            );
+        .getTracks()
+        .forEach(
+            track=>track.stop()
+        );
 
         flashStream=null;
+
     }
 
 }
 
 
-/* =========================
+/* ===============================
    RECORDING
-========================= */
+================================ */
 
-async function startRecording(){
+async function startEmergencyRecording(){
 
     if(recorder){
+
         return;
+
     }
+
 
     try{
 
         recordingStream=
-            await navigator.mediaDevices
-            .getUserMedia({
-                audio:true
-            });
+        await navigator
+        .mediaDevices
+        .getUserMedia({
+            audio:true
+        });
+
 
         recorder=
-            new MediaRecorder(
-                recordingStream
-            );
+        new MediaRecorder(
+            recordingStream
+        );
+
 
         recorder.start();
+
 
     }
 
     catch(error){
 
-        showToast(
+        toast(
             "Microphone permission unavailable."
         );
 
@@ -2225,76 +2916,97 @@ async function startRecording(){
 }
 
 
-function stopRecording(){
+function stopEmergencyRecording(){
 
     if(recorder){
 
         try{
+
             recorder.stop();
-        }
-        catch(error){}
+
+        }catch(error){}
 
         recorder=null;
+
     }
+
 
     if(recordingStream){
 
         recordingStream
-            .getTracks()
-            .forEach(
-                track=>track.stop()
-            );
+        .getTracks()
+        .forEach(
+            track=>track.stop()
+        );
 
         recordingStream=null;
+
     }
 
 }
 
 
-/* =========================
+/* ===============================
    FULL EMERGENCY
-========================= */
+================================ */
 
-async function startFullEmergency(
+async function activateEmergency(
     reason
 ){
 
-    if(emergencyActive){
+    if(emergencyRunning){
+
         return;
+
     }
 
-    emergencyActive=true;
+
+    emergencyRunning=true;
 
     emergencyID=
-        Date.now();
+    Date.now();
 
-    $("emergencyDot")
-        .classList
-        .add("active");
 
-    $("emergencyState")
-        .textContent=
-        "EMERGENCY ACTIVE";
+    get(
+        "emergencyDot"
+    )
+    .classList
+    .add("active");
 
-    $("emergencySub")
-        .textContent=
-        reason+
-        " • Continuous protection";
 
-    $("emergencyBtn")
-        .classList
-        .add("hidden");
+    get(
+        "emergencyStatus"
+    )
+    .textContent=
+    "EMERGENCY ACTIVE";
 
-    $("safeBtn")
-        .classList
-        .remove("hidden");
+
+    get(
+        "emergencyReason"
+    )
+    .textContent=
+    reason;
+
+
+    get(
+        "emergencySOS"
+    )
+    .classList
+    .add("hidden");
+
+
+    get(
+        "emergencySafe"
+    )
+    .classList
+    .remove("hidden");
 
 
     /*
-       ONE emergency record
+       RECORD ONLY ONCE
     */
 
-    addHistory(
+    recordEvent(
 
         `emergency-${emergencyID}`,
 
@@ -2307,21 +3019,31 @@ async function startFullEmergency(
 
 
     /*
-       ALL EMERGENCY ACTIONS
+       START EVERYTHING
     */
 
-    startSiren();
+    startPoliceSiren();
 
-    startRecording();
+    startFlash();
 
-    startContinuousFlash();
+    startEmergencyRecording();
+
+
+    /*
+       GET LOCATION
+    */
 
     const location=
-        await obtainLocation(
-            `emergency-location-${emergencyID}`
-        );
+    await shareLocation(
+        `emergency-location-${emergencyID}`
+    );
 
-    await prepareTrustedContactAlert(
+
+    /*
+       WHATSAPP
+    */
+
+    await alertTrustedContacts(
 
         reason,
 
@@ -2331,63 +3053,94 @@ async function startFullEmergency(
 
     );
 
-    showToast(
-        "Emergency SOS activated."
+
+    toast(
+        "Emergency activated."
     );
 
 }
 
 
-/* EMERGENCY BUTTON */
+/* ===============================
+   EMERGENCY BUTTON
+================================ */
 
-$("emergencyBtn").onclick=()=>{
+get(
+    "emergencySOS"
+)
+.onclick=()=>{
 
-    startFullEmergency(
+    activateEmergency(
         "Emergency SOS Button"
     );
 
 };
 
 
-/* I AM SAFE */
+/* ===============================
+   I AM SAFE
+================================ */
 
-$("safeBtn").onclick=()=>{
+get(
+    "emergencySafe"
+)
+.onclick=()=>{
 
-    if(!emergencyActive){
+    if(!emergencyRunning){
+
         return;
+
     }
 
-    emergencyActive=false;
 
-    stopSiren();
+    emergencyRunning=false;
 
-    stopContinuousFlash();
 
-    stopRecording();
+    stopPoliceSiren();
 
-    $("emergencyDot")
-        .classList
-        .remove("active");
+    stopFlash();
 
-    $("emergencyState")
-        .textContent=
-        "Emergency resolved";
+    stopEmergencyRecording();
 
-    $("emergencySub")
-        .textContent=
-        "I AM SAFE confirmed";
 
-    $("emergencyBtn")
-        .classList
-        .remove("hidden");
+    get(
+        "emergencyDot"
+    )
+    .classList
+    .remove("active");
 
-    $("safeBtn")
-        .classList
-        .add("hidden");
 
-    addHistory(
+    get(
+        "emergencyStatus"
+    )
+    .textContent=
+    "Emergency stopped";
 
-        `resolved-${emergencyID}`,
+
+    get(
+        "emergencyReason"
+    )
+    .textContent=
+    "I AM SAFE confirmed";
+
+
+    get(
+        "emergencySOS"
+    )
+    .classList
+    .remove("hidden");
+
+
+    get(
+        "emergencySafe"
+    )
+    .classList
+    .add("hidden");
+
+
+    recordEvent(
+
+        `safe-${emergencyID}`,
 
         "Emergency Resolved",
 
@@ -2395,83 +3148,96 @@ $("safeBtn").onclick=()=>{
 
     );
 
-    showToast(
+
+    toast(
         "Emergency stopped."
     );
 
 };
 
 
-/* =========================
+/* ===============================
    SHAKE SOS
-========================= */
+================================ */
 
 function enableShakeSOS(){
 
-    if(motionHandler){
+    if(motionStarted){
+
         return;
+
     }
+
 
     const startMotion=()=>{
 
-        motionHandler=
+        motionStarted=true;
+
+
+        window.addEventListener(
+            "devicemotion",
             event=>{
 
-                const acceleration=
-                    event.accelerationIncludingGravity;
+                const a=
+                event.accelerationIncludingGravity;
 
-                if(!acceleration){
+
+                if(!a){
+
                     return;
+
                 }
 
-                const magnitude=
-                    Math.sqrt(
 
-                        Math.pow(
-                            acceleration.x||0,
-                            2
-                        )
+                const strength=
+                Math.sqrt(
 
-                        +
+                    Math.pow(
+                        a.x||0,
+                        2
+                    )
 
-                        Math.pow(
-                            acceleration.y||0,
-                            2
-                        )
+                    +
 
-                        +
+                    Math.pow(
+                        a.y||0,
+                        2
+                    )
 
-                        Math.pow(
-                            acceleration.z||0,
-                            2
-                        )
+                    +
 
-                    );
+                    Math.pow(
+                        a.z||0,
+                        2
+                    )
+
+                );
+
 
                 const now=
-                    Date.now();
+                Date.now();
+
 
                 if(
-                    magnitude>18 &&
+                    strength>18 &&
                     now-lastShake>2200
                 ){
 
                     lastShake=now;
 
-                    startFullEmergency(
-                        "Shake SOS"
+
+                    activateEmergency(
+                        "SHAKE SOS"
                     );
 
                 }
 
-            };
+            }
 
-        window.addEventListener(
-            "devicemotion",
-            motionHandler
         );
 
-        showToast(
+
+        toast(
             "Shake SOS enabled."
         );
 
@@ -2489,9 +3255,11 @@ function enableShakeSOS(){
 
         window.DeviceMotionEvent
         .requestPermission()
-        .then(permission=>{
+        .then(result=>{
 
-            if(permission==="granted"){
+            if(
+                result==="granted"
+            ){
 
                 startMotion();
 
@@ -2499,7 +3267,7 @@ function enableShakeSOS(){
 
             else{
 
-                showToast(
+                toast(
                     "Motion permission denied."
                 );
 
@@ -2519,8 +3287,8 @@ function enableShakeSOS(){
 
 
 /*
-   Enable Shake SOS when
-   Emergency page is opened.
+   Enable shake when Emergency
+   screen is opened.
 */
 
 document
@@ -2529,94 +3297,110 @@ document
 )
 .addEventListener(
     "click",
-    ()=>enableShakeSOS()
+    enableShakeSOS
 );
 
 
-/* =========================
+/* ===============================
    SILENT SOS
-========================= */
+================================ */
 
-$("silentSOS").onclick=
+get(
+    "silentSOS"
+)
+.onclick=
 async()=>{
 
-    const eventID=
-        Date.now();
+    const id=
+    Date.now();
+
 
     const location=
-        await obtainLocation(
-            `silent-location-${eventID}`
-        );
+    await shareLocation(
+        `silent-location-${id}`
+    );
 
-    addHistory(
 
-        `silent-${eventID}`,
+    recordEvent(
+
+        `silent-${id}`,
 
         "Silent SOS",
 
-        "Silent emergency activated. No siren or flash.",
+        "Silent SOS activated. No siren or flash.",
 
         location
 
     );
 
-    await prepareTrustedContactAlert(
+
+    await alertTrustedContacts(
 
         "Silent SOS",
 
         location,
 
-        eventID
+        id
 
     );
 
-    showToast(
+
+    toast(
         "Silent SOS activated."
     );
 
 };
 
 
-/* =========================
-   VOICE SOS
-========================= */
+/* ===============================
+   VOICE
+================================ */
 
-$("voiceStart").onclick=()=>{
+get(
+    "startVoice"
+)
+.onclick=()=>{
 
     const SpeechRecognition=
-        window.SpeechRecognition ||
-        window.webkitSpeechRecognition;
+    window.SpeechRecognition ||
+    window.webkitSpeechRecognition;
+
 
     if(!SpeechRecognition){
 
-        showToast(
-            "Voice recognition is not supported in this browser."
+        toast(
+            "Voice recognition is not supported."
         );
 
         return;
-    }
-
-    if(recognition){
-
-        recognition.stop();
 
     }
 
 
-    recognition=
-        new SpeechRecognition();
+    if(voiceRecognition){
 
-    recognition.continuous=true;
+        voiceRecognition.stop();
 
-    recognition.interimResults=true;
-
-    recognition.lang="en-IN";
+    }
 
 
-    recognition.onresult=
+    voiceRecognition=
+    new SpeechRecognition();
+
+
+    voiceRecognition.continuous=true;
+
+    voiceRecognition.interimResults=true;
+
+    voiceRecognition.lang=
+    "en-IN";
+
+
+    voiceRecognition.onresult=
     event=>{
 
         let text="";
+
 
         for(
             let i=event.resultIndex;
@@ -2625,96 +3409,89 @@ $("voiceStart").onclick=()=>{
         ){
 
             text+=
-                event.results[i][0]
-                .transcript
-                .toLowerCase()
-                +" ";
+            event.results[i][0]
+            .transcript
+            .toLowerCase()
+            +" ";
 
         }
 
 
-        $("voiceStatus")
-            .textContent=
-            "Heard: "+
-            text;
+        get(
+            "voiceStatus"
+        )
+        .textContent=
+        "Heard: "+text;
 
 
         const now=
-            Date.now();
+        Date.now();
+
 
         if(
-            now-lastVoiceTrigger
-            <
-            2500
+            now-lastVoice<2500
         ){
 
             return;
 
         }
 
-
-        /*
-           PHONE = FULL EMERGENCY
-        */
 
         if(
             /\bphone\b/
             .test(text)
         ){
 
-            lastVoiceTrigger=now;
+            lastVoice=now;
 
-            recognition.stop();
+            voiceRecognition.stop();
 
-            startFullEmergency(
-                "Voice Command: PHONE"
+            activateEmergency(
+                "VOICE — PHONE"
             );
-
-            return;
 
         }
 
 
-        /*
-           MOBILE = SILENT
-        */
-
-        if(
+        else if(
             /\bmobile\b/
             .test(text)
         ){
 
-            lastVoiceTrigger=now;
+            lastVoice=now;
 
-            recognition.stop();
+            voiceRecognition.stop();
 
-            const eventID=
-                Date.now();
 
-            obtainLocation(
-                `voice-mobile-location-${eventID}`
+            const id=
+            Date.now();
+
+
+            shareLocation(
+                `voice-mobile-location-${id}`
             )
             .then(location=>{
 
-                addHistory(
+                recordEvent(
 
-                    `voice-mobile-${eventID}`,
+                    `voice-mobile-${id}`,
 
                     "Voice Silent SOS",
 
-                    "Voice command MOBILE detected. Silent emergency activated.",
+                    "MOBILE command detected.",
 
                     location
 
                 );
 
-                prepareTrustedContactAlert(
 
-                    "Voice Command: MOBILE",
+                alertTrustedContacts(
+
+                    "VOICE — MOBILE",
 
                     location,
 
-                    eventID
+                    id
 
                 );
 
@@ -2725,104 +3502,145 @@ $("voiceStart").onclick=()=>{
     };
 
 
-    recognition.start();
+    voiceRecognition.start();
 
-    $("voiceStatus")
-        .textContent=
-        "Listening for PHONE or MOBILE…";
+
+    get(
+        "voiceStatus"
+    )
+    .textContent=
+    "Listening for PHONE or MOBILE…";
 
 };
 
 
-$("voiceStop").onclick=()=>{
+get(
+    "stopVoice"
+)
+.onclick=()=>{
 
-    if(recognition){
+    if(voiceRecognition){
 
-        recognition.stop();
+        voiceRecognition.stop();
 
-        recognition=null;
+        voiceRecognition=null;
 
     }
 
-    $("voiceStatus")
-        .textContent=
-        "Voice listening OFF.";
+
+    get(
+        "voiceStatus"
+    )
+    .textContent=
+    "Voice OFF.";
 
 };
 
 
-/* =========================
+/* ===============================
    AUTO SOS
-========================= */
+================================ */
 
-$("autoStart").onclick=()=>{
+get(
+    "startAuto"
+)
+.onclick=()=>{
 
-    if(autoTimer){
+    if(autoInterval){
+
         return;
+
     }
+
 
     let seconds=10;
 
-    $("count")
+
+    get(
+        "autoCount"
+    )
+    .textContent=
+    seconds;
+
+
+    get(
+        "autoStatus"
+    )
+    .textContent=
+    "Countdown running…";
+
+
+    autoInterval=
+    setInterval(()=>{
+
+        seconds--;
+
+
+        get(
+            "autoCount"
+        )
         .textContent=
         seconds;
 
-    $("autoStatus")
-        .textContent=
-        "Countdown running…";
+
+        if(seconds<=0){
+
+            clearInterval(
+                autoInterval
+            );
+
+            autoInterval=null;
 
 
-    autoTimer=
-        setInterval(()=>{
+            activateEmergency(
+                "AUTO SOS — NO RESPONSE"
+            );
 
-            seconds--;
+        }
 
-            $("count")
-                .textContent=
-                seconds;
-
-            if(seconds<=0){
-
-                clearInterval(
-                    autoTimer
-                );
-
-                autoTimer=null;
-
-                startFullEmergency(
-                    "Auto SOS"
-                );
-
-            }
-
-        },1000);
+    },1000);
 
 };
 
 
-$("autoSafe").onclick=()=>{
+/*
+   THIS BUTTON ALWAYS STOPS
+   THE COUNTDOWN.
+*/
 
-    if(!autoTimer){
-        return;
+get(
+    "stopAuto"
+)
+.onclick=()=>{
+
+    if(autoInterval){
+
+        clearInterval(
+            autoInterval
+        );
+
+        autoInterval=null;
+
     }
 
-    clearInterval(
-        autoTimer
-    );
 
-    autoTimer=null;
+    get(
+        "autoCount"
+    )
+    .textContent=
+    "10";
 
-    $("count")
-        .textContent=
-        "10";
 
-    $("autoStatus")
-        .textContent=
-        "I AM SAFE. Countdown cancelled.";
+    get(
+        "autoStatus"
+    )
+    .textContent=
+    "I AM SAFE — countdown stopped.";
 
-    addHistory(
 
-        `auto-safe-${Date.now()}`,
+    recordEvent(
+
+        `auto-stop-${Date.now()}`,
 
         "Auto SOS Cancelled",
 
@@ -2830,56 +3648,72 @@ $("autoSafe").onclick=()=>{
 
     );
 
+
+    toast(
+        "Auto SOS stopped."
+    );
+
 };
 
 
-/* =========================
+/* ===============================
    BATTERY
-========================= */
+================================ */
 
 async function checkBattery(){
 
     if(!navigator.getBattery){
 
-        $("batteryStatus")
-            .textContent=
-            "Battery API not supported by this browser.";
+        get(
+            "batteryText"
+        )
+        .textContent=
+        "Battery information unavailable in this browser.";
 
         return;
 
     }
 
+
     const battery=
-        await navigator.getBattery();
+    await navigator.getBattery();
 
 
-    const update=()=>{
+    function update(){
 
         const percentage=
-            Math.round(
-                battery.level*100
-            );
+        Math.round(
+            battery.level*100
+        );
 
-        $("batteryValue")
+
+        get(
+            "batteryNumber"
+        )
+        .textContent=
+        percentage+"%";
+
+
+        if(
+            percentage<=10
+        ){
+
+            get(
+                "batteryText"
+            )
             .textContent=
-            percentage+
-            "%";
+            "⚠️ Battery is 10% or lower. Trusted-contact warning prepared.";
 
 
-        if(percentage<=10){
+            const date=
+            new Date()
+            .toISOString()
+            .slice(0,10);
 
-            $("batteryStatus")
-                .textContent=
-                "⚠️ Battery is 10% or lower.";
 
-            const day=
-                new Date()
-                .toISOString()
-                .slice(0,10);
+            recordEvent(
 
-            addHistory(
-
-                `battery-${day}`,
+                `low-battery-${date}`,
 
                 "Low Battery",
 
@@ -2891,16 +3725,19 @@ async function checkBattery(){
 
         else{
 
-            $("batteryStatus")
-                .textContent=
-                "Battery normal.";
+            get(
+                "batteryText"
+            )
+            .textContent=
+            "Battery normal.";
 
         }
 
-    };
+    }
 
 
     update();
+
 
     battery.addEventListener(
         "levelchange",
@@ -2909,36 +3746,46 @@ async function checkBattery(){
 
 }
 
-$("batteryCheck").onclick=
-    checkBattery;
+
+get(
+    "checkBattery"
+)
+.onclick=
+checkBattery;
 
 
-/* =========================
+/* ===============================
    SAFE JOURNEY
-========================= */
+================================ */
 
-$("journeyStart").onclick=()=>{
+get(
+    "startJourney"
+)
+.onclick=()=>{
 
     clearTimeout(
-        journeyTimer
+        journeyTimeout
     );
 
+
     const from=
-        $("journeyFrom")
-        .value
-        .trim();
+    get("fromPlace")
+    .value
+    .trim();
+
 
     const to=
-        $("journeyTo")
-        .value
-        .trim();
+    get("toPlace")
+    .value
+    .trim();
+
 
     const arrival=
-        new Date(
-            $("journeyArrival")
-            .value
-        )
-        .getTime();
+    new Date(
+        get("arrivalTime")
+        .value
+    )
+    .getTime();
 
 
     if(
@@ -2948,8 +3795,8 @@ $("journeyStart").onclick=()=>{
         arrival<=Date.now()
     ){
 
-        showToast(
-            "Enter From, To and a future arrival time."
+        toast(
+            "Enter From, To and future arrival time."
         );
 
         return;
@@ -2957,158 +3804,194 @@ $("journeyStart").onclick=()=>{
     }
 
 
-    $("journeyStatus")
-        .textContent=
-        `${from} → ${to}
-        | Expected:
-        ${new Date(arrival).toLocaleString("en-IN")}`;
+    get(
+        "journeyStatus"
+    )
+    .textContent=
+    `
+    Journey:
+    ${from} → ${to}
+
+    Expected arrival:
+    ${new Date(arrival).toLocaleString("en-IN")}
+    `;
 
 
-    addHistory(
+    recordEvent(
 
         `journey-${arrival}`,
 
         "Safe Journey Started",
 
-        `${from} → ${to}.
-        Expected arrival:
-        ${new Date(arrival).toLocaleString("en-IN")}`
+        `${from} → ${to}. Expected arrival ${new Date(arrival).toLocaleString("en-IN")}`
 
     );
 
 
-    journeyTimer=
-        setTimeout(
+    journeyTimeout=
+    setTimeout(
 
-            startJourneyCheck,
+        showArrivalQuestion,
 
-            arrival-Date.now()
+        arrival-Date.now()
 
-        );
+    );
 
 
-    showToast(
+    toast(
         "Safe Journey started."
     );
 
 };
 
 
-function startJourneyCheck(){
+function showArrivalQuestion(){
 
-    $("journeyQuestion")
-        .classList
-        .remove("hidden");
+    get(
+        "arrivalQuestion"
+    )
+    .classList
+    .remove("hidden");
 
-    journeySeconds=60;
 
-    $("journeyRemaining")
-        .textContent=
-        "60 seconds remaining.";
+    arrivalSeconds=60;
+
+
+    get(
+        "arrivalCountdown"
+    )
+    .textContent=
+    "60 seconds remaining";
 
 
     clearInterval(
-        journeyQuestionTimer
+        arrivalInterval
     );
 
 
-    journeyQuestionTimer=
-        setInterval(()=>{
+    arrivalInterval=
+    setInterval(()=>{
 
-            journeySeconds--;
-
-            $("journeyRemaining")
-                .textContent=
-                journeySeconds+
-                " seconds remaining.";
+        arrivalSeconds--;
 
 
-            if(
-                journeySeconds<=0
-            ){
+        get(
+            "arrivalCountdown"
+        )
+        .textContent=
+        arrivalSeconds+
+        " seconds remaining";
 
-                clearInterval(
-                    journeyQuestionTimer
-                );
 
-                $("journeyQuestion")
-                    .classList
-                    .add("hidden");
+        if(
+            arrivalSeconds<=0
+        ){
 
-                startFullEmergency(
-                    "Safe Journey — No Response"
-                );
+            clearInterval(
+                arrivalInterval
+            );
 
-            }
 
-        },1000);
+            get(
+                "arrivalQuestion"
+            )
+            .classList
+            .add("hidden");
+
+
+            activateEmergency(
+                "SAFE JOURNEY — NO RESPONSE"
+            );
+
+        }
+
+    },1000);
 
 }
 
 
-$("journeySafe").onclick=()=>{
+get(
+    "journeySafe"
+)
+.onclick=()=>{
 
     clearInterval(
-        journeyQuestionTimer
+        arrivalInterval
     );
 
-    $("journeyQuestion")
-        .classList
-        .add("hidden");
 
-    addHistory(
+    get(
+        "arrivalQuestion"
+    )
+    .classList
+    .add("hidden");
+
+
+    recordEvent(
 
         `journey-safe-${Date.now()}`,
 
-        "Safe Journey Completed",
+        "Journey Completed",
 
         "User pressed I AM SAFE."
 
     );
 
-    showToast(
+
+    toast(
         "Journey marked safe."
     );
 
 };
 
 
-$("journeyDanger").onclick=()=>{
+get(
+    "journeyDanger"
+)
+.onclick=()=>{
 
     clearInterval(
-        journeyQuestionTimer
+        arrivalInterval
     );
 
-    $("journeyQuestion")
-        .classList
-        .add("hidden");
 
-    startFullEmergency(
-        "Safe Journey — I AM IN DANGER"
+    get(
+        "arrivalQuestion"
+    )
+    .classList
+    .add("hidden");
+
+
+    activateEmergency(
+        "SAFE JOURNEY — I AM IN DANGER"
     );
 
 };
 
 
-$("routeBtn").onclick=()=>{
+get(
+    "openRoute"
+)
+.onclick=()=>{
 
     const from=
-        $("journeyFrom")
-        .value
-        .trim()
-        ||
-        "My Location";
+    get("fromPlace")
+    .value
+    .trim()
+    ||
+    "My Location";
+
 
     const to=
-        $("journeyTo")
-        .value
-        .trim();
+    get("toPlace")
+    .value
+    .trim();
 
 
     if(!to){
 
-        showToast(
-            "Enter destination first."
+        toast(
+            "Enter destination."
         );
 
         return;
@@ -3127,42 +4010,49 @@ $("routeBtn").onclick=()=>{
 };
 
 
-/* =========================
+/* ===============================
    CAMERA
-========================= */
+================================ */
 
-$("cameraOpen").onclick=
+get(
+    "openCamera"
+)
+.onclick=
 async()=>{
 
     try{
 
         cameraStream=
-            await navigator
-            .mediaDevices
-            .getUserMedia({
+        await navigator
+        .mediaDevices
+        .getUserMedia({
 
-                video:{
-                    facingMode:
-                    "environment"
-                }
+            video:{
+                facingMode:
+                "environment"
+            }
 
-            });
-
-
-        $("cameraVideo")
-            .srcObject=
-            cameraStream;
+        });
 
 
-        $("cameraStatus")
-            .textContent=
-            "Camera ready.";
+        get(
+            "camera"
+        )
+        .srcObject=
+        cameraStream;
+
+
+        get(
+            "cameraStatus"
+        )
+        .textContent=
+        "Camera ready.";
 
     }
 
     catch(error){
 
-        showToast(
+        toast(
             "Camera permission denied."
         );
 
@@ -3171,11 +4061,14 @@ async()=>{
 };
 
 
-$("cameraCapture").onclick=()=>{
+get(
+    "takePhoto"
+)
+.onclick=()=>{
 
     if(!cameraStream){
 
-        showToast(
+        toast(
             "Open camera first."
         );
 
@@ -3185,40 +4078,42 @@ $("cameraCapture").onclick=()=>{
 
 
     const video=
-        $("cameraVideo");
+    get("camera");
+
 
     const canvas=
-        $("cameraCanvas");
+    get("canvas");
 
 
     canvas.width=
-        video.videoWidth ||
-        640;
+    video.videoWidth ||
+    640;
+
 
     canvas.height=
-        video.videoHeight ||
-        480;
+    video.videoHeight ||
+    480;
 
 
     canvas
-        .getContext("2d")
-        .drawImage(
-            video,
-            0,
-            0,
-            canvas.width,
-            canvas.height
-        );
+    .getContext("2d")
+    .drawImage(
+        video,
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
 
 
     const image=
-        canvas.toDataURL(
-            "image/jpeg",
-            .82
-        );
+    canvas.toDataURL(
+        "image/jpeg",
+        .82
+    );
 
 
-    addHistory(
+    recordEvent(
 
         `photo-${Date.now()}`,
 
@@ -3233,221 +4128,272 @@ $("cameraCapture").onclick=()=>{
     );
 
 
-    $("cameraStatus")
-        .textContent=
-        "Photo saved to History.";
+    get(
+        "cameraStatus"
+    )
+    .textContent=
+    "Photo saved to History.";
 
-    showToast(
+
+    toast(
         "Photo saved."
     );
 
 };
 
 
-$("cameraClose").onclick=()=>{
+get(
+    "closeCamera"
+)
+.onclick=()=>{
 
     if(cameraStream){
 
         cameraStream
-            .getTracks()
-            .forEach(
-                track=>track.stop()
-            );
+        .getTracks()
+        .forEach(
+            track=>track.stop()
+        );
 
     }
 
+
     cameraStream=null;
 
-    $("cameraVideo")
-        .srcObject=null;
 
-    $("cameraStatus")
-        .textContent=
-        "Camera closed.";
+    get(
+        "camera"
+    )
+    .srcObject=null;
+
+
+    get(
+        "cameraStatus"
+    )
+    .textContent=
+    "Camera closed.";
 
 };
 
 
-/* =========================
+/* ===============================
    FAKE CALL
-========================= */
+================================ */
 
-const fakeConversation=[
+const conversation=[
 
 "Hey, where are you right now?",
 
-"Okay, I was just checking on you. Are you still travelling?",
+"Okay, I was just checking on you.",
 
-"Alright, take your time. I am staying on the call with you.",
+"Are you still travelling?",
 
-"Keep your phone with you and stay somewhere safe.",
+"Alright, take your time.",
 
-"Tell me when you reach. I will stay on the call."
+"Stay somewhere safe and call me when you reach.",
+
+"Okay, I am staying on the call with you."
 
 ];
 
 
 function speakFakeLine(){
 
-    const message=
-        fakeConversation[
-            fakeLine %
-            fakeConversation.length
-        ];
+    const line=
+    conversation[
+        fakeLineIndex
+        %
+        conversation.length
+    ];
 
-    fakeLine++;
+
+    fakeLineIndex++;
 
 
     const bubble=
-        document.createElement(
-            "div"
-        );
+    document.createElement(
+        "div"
+    );
+
 
     bubble.className=
-        "bubble male";
+    "bubble";
+
 
     bubble.textContent=
-        message;
+    line;
 
 
-    $("conversation")
-        .appendChild(
-            bubble
-        );
+    get(
+        "conversation"
+    )
+    .appendChild(
+        bubble
+    );
 
 
-    $("conversation")
-        .scrollTop=
-        $("conversation")
-        .scrollHeight;
+    get(
+        "conversation"
+    )
+    .scrollTop=
+    get(
+        "conversation"
+    ).scrollHeight;
 
 
     if(
-        "speechSynthesis"
-        in window
+        window.speechSynthesis
     ){
 
         const speech=
-            new SpeechSynthesisUtterance(
-                message
-            );
+        new SpeechSynthesisUtterance(
+            line
+        );
 
-        speech.lang="en-IN";
 
-        speech.rate=.9;
+        speech.lang=
+        "en-IN";
 
-        speech.pitch=.72;
+
+        speech.rate=
+        .9;
+
+
+        speech.pitch=
+        .72;
+
 
         window.speechSynthesis
-            .speak(
-                speech
-            );
+        .speak(
+            speech
+        );
 
     }
 
 }
 
 
-$("fakeCallStart").onclick=()=>{
+get(
+    "startFakeCall"
+)
+.onclick=()=>{
 
-    $("fakeCall")
-        .classList
-        .remove("hidden");
+    get(
+        "fakeCallOverlay"
+    )
+    .classList
+    .remove("hidden");
 
-    fakeSeconds=0;
 
-    fakeLine=0;
+    fakeCallSeconds=0;
 
-    $("conversation")
-        .innerHTML="";
+    fakeLineIndex=0;
+
+
+    get(
+        "conversation"
+    )
+    .innerHTML="";
+
 
     speakFakeLine();
 
 
     clearInterval(
-        fakeTimer
+        fakeCallInterval
     );
 
 
-    fakeTimer=
-        setInterval(()=>{
+    fakeCallInterval=
+    setInterval(()=>{
 
-            fakeSeconds++;
-
-
-            $("callTimer")
-                .textContent=
-
-                `${String(
-                    Math.floor(
-                        fakeSeconds/60
-                    )
-                ).padStart(2,"0")}:
-                ${String(
-                    fakeSeconds%60
-                ).padStart(2,"0")}
-                / 05:00`;
+        fakeCallSeconds++;
 
 
-            if(
-                fakeSeconds>=300
-            ){
-
-                clearInterval(
-                    fakeTimer
-                );
-
-                window.speechSynthesis
-                    ?.cancel();
-
-
-                $("fakeCall")
-                    .classList
-                    .add("hidden");
+        get(
+            "fakeTimer"
+        )
+        .textContent=
+        `${String(
+            Math.floor(
+                fakeCallSeconds/60
+            )
+        ).padStart(2,"0")}:${String(
+            fakeCallSeconds%60
+        ).padStart(2,"0")} / 05:00`;
 
 
-                addHistory(
+        if(
+            fakeCallSeconds>=300
+        ){
 
-                    "fake-call-timeout",
-
-                    "Fake Call Timeout",
-
-                    "STOP CALL was not pressed within 5 minutes."
-
-                );
+            clearInterval(
+                fakeCallInterval
+            );
 
 
-                startFullEmergency(
-                    "Fake Call — 5 Minute Timeout"
-                );
+            window.speechSynthesis
+            ?.cancel();
 
-            }
 
-        },1000);
+            get(
+                "fakeCallOverlay"
+            )
+            .classList
+            .add("hidden");
+
+
+            recordEvent(
+
+                "fake-call-timeout",
+
+                "Fake Call Timeout",
+
+                "STOP CALL was not pressed within 5 minutes."
+
+            );
+
+
+            activateEmergency(
+                "FAKE CALL — 5 MINUTE TIMEOUT"
+            );
+
+        }
+
+    },1000);
 
 };
 
 
-$("callContinue").onclick=
-    speakFakeLine;
+get(
+    "continueCall"
+)
+.onclick=
+speakFakeLine;
 
 
-$("callStop").onclick=()=>{
+get(
+    "stopCall"
+)
+.onclick=()=>{
 
     clearInterval(
-        fakeTimer
+        fakeCallInterval
     );
 
+
     window.speechSynthesis
-        ?.cancel();
+    ?.cancel();
 
 
-    $("fakeCall")
-        .classList
-        .add("hidden");
+    get(
+        "fakeCallOverlay"
+    )
+    .classList
+    .add("hidden");
 
 
-    addHistory(
+    recordEvent(
 
         `fake-call-stop-${Date.now()}`,
 
@@ -3458,57 +4404,68 @@ $("callStop").onclick=()=>{
     );
 
 
-    showToast(
+    toast(
         "Fake call stopped."
     );
 
 };
 
 
-/* =========================
-   OFFLINE EMERGENCY
-========================= */
+/* ===============================
+   OFFLINE SMS
+================================ */
 
-$("offlineStart").onclick=
+get(
+    "offlineButton"
+)
+.onclick=
 async()=>{
 
     let location=null;
 
+
     try{
 
         location=
-            await getLocation();
+        await currentLocation();
 
-    }
-
-    catch(error){}
+    }catch(error){}
 
 
     const maps=
-        location
-
-        ?
-
-        `https://www.google.com/maps?q=${location.lat},${location.lon}`
-
-        :
-
-        "Location unavailable";
+    location
+    ?
+    `https://www.google.com/maps?q=${location.lat},${location.lon}`
+    :
+    "Location unavailable";
 
 
     const message=
-        `DANGER. HELP ME IMMEDIATELY.
-        Please track my location:
-        ${maps}`;
+    `🚨 SHE-SHIELD EMERGENCY 🚨
+
+DANGER. HELP ME IMMEDIATELY.
+
+Please track my location:
+${maps}`;
 
 
-    const firstContact=
-        data.contacts[0]?.phone
-        ||
-        "";
+    const contact=
+    data.contacts[0];
 
 
-    addHistory(
+    const phone=
+    contact
+    ?
+    contact.phone
+    .replace(
+        /[^0-9]/g,
+        ""
+    )
+    :
+    "";
+
+
+    recordEvent(
 
         `offline-${Date.now()}`,
 
@@ -3521,87 +4478,98 @@ async()=>{
     );
 
 
-    $("offlineStatus")
-        .innerHTML=
+    get(
+        "offlineResult"
+    )
+    .innerHTML=
+    `
 
-        `
+    <b>
+    Emergency SMS prepared.
+    </b>
 
-        <b>
-        Emergency SMS ready
-        </b>
+    <br><br>
 
-        <br><br>
+    ${safeText(message)}
 
-        ${escapeHTML(message)}
+    <br><br>
 
-        <br><br>
+    <a
+    class="btn primary"
+    href="sms:${phone}?body=${encodeURIComponent(message)}">
 
-        <a
-        class="btn primary"
-        href="sms:${firstContact}?body=${encodeURIComponent(message)}">
+    OPEN SMS
 
-        OPEN SMS
+    </a>
 
-        </a>
-
-        `;
+    `;
 
 };
 
 
-/* =========================
+/* ===============================
    ESCALATION
-========================= */
+================================ */
 
 function renderEscalation(){
+
+    const list=
+    get(
+        "escalationList"
+    );
+
 
     if(
         data.contacts.length===0
     ){
 
-        $("escalationList")
-            .innerHTML=
-            '<div class="info">Save trusted contacts first.</div>';
+        list.innerHTML=
+        `
+        <div class="panel">
+        No trusted contacts saved.
+        </div>
+        `;
 
         return;
 
     }
 
 
-    $("escalationList")
-        .innerHTML=
+    list.innerHTML=
+    data.contacts
+    .map(
+        (contact,index)=>`
 
-        data.contacts
-        .map(
-            (contact,index)=>`
+        <div class="panel">
 
-            <div class="info">
+        <b>
+        ${index+1}.
+        ${safeText(contact.name)}
+        </b>
 
-            <b>
-            ${index+1}.
-            ${escapeHTML(contact.name)}
-            </b>
+        <br>
 
-            <br>
+        ${safeText(contact.phone)}
 
-            ${escapeHTML(contact.phone)}
+        </div>
 
-            </div>
-
-            `
-        )
-        .join("");
+        `
+    )
+    .join("");
 
 }
 
 
-$("escalationStart").onclick=()=>{
+get(
+    "startEscalation"
+)
+.onclick=()=>{
 
     if(
         data.contacts.length===0
     ){
 
-        showToast(
+        toast(
             "Save trusted contacts first."
         );
 
@@ -3613,68 +4581,74 @@ $("escalationStart").onclick=()=>{
     let index=0;
 
 
-    $("escalationStatus")
-        .textContent=
-        `Alert workflow started for
-        ${data.contacts[0].name}`;
+    get(
+        "escalationStatus"
+    )
+    .textContent=
+    `Escalating to
+    ${data.contacts[0].name}`;
 
 
     clearInterval(
-        escalationTimer
+        escalationInterval
     );
 
 
-    escalationTimer=
-        setInterval(()=>{
+    escalationInterval=
+    setInterval(()=>{
 
-            index++;
-
-
-            if(
-                index>=data.contacts.length
-            ){
-
-                clearInterval(
-                    escalationTimer
-                );
+        index++;
 
 
-                $("escalationStatus")
-                    .textContent=
-                    "All saved contacts processed.";
+        if(
+            index>=data.contacts.length
+        ){
+
+            clearInterval(
+                escalationInterval
+            );
 
 
-                addHistory(
-
-                    `escalation-${Date.now()}`,
-
-                    "Emergency Escalation",
-
-                    "All saved trusted contacts processed."
-
-                );
+            get(
+                "escalationStatus"
+            )
+            .textContent=
+            "All trusted contacts processed.";
 
 
-                return;
+            recordEvent(
 
-            }
+                `escalation-${Date.now()}`,
+
+                "Emergency Escalation",
+
+                "Trusted contact escalation completed."
+
+            );
 
 
-            $("escalationStatus")
-                .textContent=
-                `Escalating to
-                ${data.contacts[index].name}`;
+            return;
 
-        },4000);
+        }
+
+
+        get(
+            "escalationStatus"
+        )
+        .textContent=
+        `Escalating to
+        ${data.contacts[index].name}`;
+
+    },4000);
 
 };
 
 
-/* =========================
+/* ===============================
    COMMUTER ISSUES
-========================= */
+================================ */
 
-const commuterIssues=[
+const issues=[
 
 ["🚕","Cab driver behaving suspiciously"],
 
@@ -3682,32 +4656,34 @@ const commuterIssues=[
 
 ["🚌","Bus route changed"],
 
-["👥","Vehicle is too crowded"],
+["👥","Vehicle is overcrowded"],
 
 ["👤","Someone is following me"],
 
-["🗣️","Harassment or inappropriate behaviour"],
+["🗣️","Harassment"],
 
 ["🛑","Driver refusing to stop"],
 
 ["💰","Fare dispute"],
 
-["🚨","Other safety emergency"]
+["🚨","Other emergency"]
 
 ];
 
 
-$("issueGrid").innerHTML=
-
-commuterIssues
+get(
+    "issueList"
+)
+.innerHTML=
+issues
 .map(
 (issue,index)=>`
 
 <button
-class="card"
+class="feature issue"
 data-issue="${index}">
 
-<div class="card-icon">
+<div class="featureIcon">
 ${issue[0]}
 </div>
 
@@ -3716,7 +4692,7 @@ ${issue[1]}
 </h3>
 
 <p>
-Tap once to record.
+Tap to record.
 </p>
 
 </button>
@@ -3727,22 +4703,24 @@ Tap once to record.
 
 
 document
-.querySelectorAll("[data-issue]")
+.querySelectorAll(
+    "[data-issue]"
+)
 .forEach(button=>{
 
     button.onclick=()=>{
 
         const issue=
-            commuterIssues[
-                Number(
-                    button.dataset.issue
-                )
-            ][1];
+        issues[
+            Number(
+                button.dataset.issue
+            )
+        ][1];
 
 
-        addHistory(
+        recordEvent(
 
-            `commuter-${issue}`,
+            `issue-${issue}`,
 
             "Commuter Issue",
 
@@ -3751,12 +4729,14 @@ document
         );
 
 
-        $("issueStatus")
-            .textContent=
-            "Recorded: "+issue;
+        get(
+            "issueStatus"
+        )
+        .textContent=
+        "Recorded: "+issue;
 
 
-        showToast(
+        toast(
             "Issue recorded."
         );
 
@@ -3765,18 +4745,23 @@ document
 });
 
 
-/* =========================
+/* ===============================
    HELP
-========================= */
+================================ */
 
-$("instructions").onclick=()=>{
+get(
+    "instructions"
+)
+.onclick=()=>{
 
-    $("helpResult").innerHTML=
-
+    get(
+        "helpResult"
+    )
+    .innerHTML=
     `
 
     <h3>
-    How to use She-Shield
+    How to Use She-Shield
     </h3>
 
     <ol>
@@ -3786,7 +4771,11 @@ $("instructions").onclick=()=>{
     </li>
 
     <li>
-    Emergency SOS starts the complete emergency workflow.
+    Emergency SOS starts all emergency actions with one press.
+    </li>
+
+    <li>
+    Shake the phone to activate Shake SOS.
     </li>
 
     <li>
@@ -3794,23 +4783,19 @@ $("instructions").onclick=()=>{
     </li>
 
     <li>
-    Say MOBILE for silent emergency.
+    Say MOBILE for silent SOS.
     </li>
 
     <li>
-    Shake the phone for Shake SOS after motion permission is enabled.
+    Use Auto SOS when you need a timed safety check.
     </li>
 
     <li>
-    Safe Journey checks the user at the expected arrival time.
+    Use Safe Journey when travelling.
     </li>
 
     <li>
-    Capture stores evidence in History.
-    </li>
-
-    <li>
-    Fake Call escalates after five minutes if STOP CALL is not pressed.
+    Use Capture to store evidence.
     </li>
 
     </ol>
@@ -3820,10 +4805,15 @@ $("instructions").onclick=()=>{
 };
 
 
-$("tips").onclick=()=>{
+get(
+    "safetyTips"
+)
+.onclick=()=>{
 
-    $("helpResult").innerHTML=
-
+    get(
+        "helpResult"
+    )
+    .innerHTML=
     `
 
     <h3>
@@ -3833,7 +4823,7 @@ $("tips").onclick=()=>{
     <ul>
 
     <li>
-    Keep the phone charged.
+    Keep your phone charged.
     </li>
 
     <li>
@@ -3841,11 +4831,11 @@ $("tips").onclick=()=>{
     </li>
 
     <li>
-    Test permissions before using the system.
+    Test permissions before your journey.
     </li>
 
     <li>
-    Move toward a public safe location when possible.
+    Stay in public and well-lit areas when possible.
     </li>
 
     <li>
@@ -3859,18 +4849,168 @@ $("tips").onclick=()=>{
 };
 
 
-/* =========================
-   START APPLICATION
-========================= */
+/* ===============================
+   CONTACT RENDER
+================================ */
+
+function renderContacts(){
+
+    const list=
+    get(
+        "contactsList"
+    );
+
+
+    if(
+        data.contacts.length===0
+    ){
+
+        list.innerHTML=
+        `
+        <div class="panel">
+        No trusted contacts saved.
+        </div>
+        `;
+
+        return;
+
+    }
+
+
+    list.innerHTML=
+    data.contacts
+    .map(
+        (contact,index)=>`
+
+        <div class="contact">
+
+        <div class="avatar">
+        ${index+1}
+        </div>
+
+        <div>
+
+        <b>
+        ${safeText(contact.name)}
+        </b>
+
+        <br>
+
+        <small>
+        ${safeText(contact.phone)}
+        </small>
+
+        </div>
+
+        </div>
+
+        `
+    )
+    .join("");
+
+}
+
+
+/* ===============================
+   SAVE CONTACT
+================================ */
+
+get(
+    "saveContact"
+)
+.onclick=()=>{
+
+    if(
+        data.contacts.length>=5
+    ){
+
+        toast(
+            "Maximum 5 contacts."
+        );
+
+        return;
+
+    }
+
+
+    const name=
+    get("contactName")
+    .value
+    .trim();
+
+
+    const phone=
+    get("contactPhone")
+    .value
+    .trim();
+
+
+    if(
+        !name ||
+        !phone
+    ){
+
+        toast(
+            "Enter name and phone number."
+        );
+
+        return;
+
+    }
+
+
+    data.contacts.push({
+
+        name:name,
+
+        phone:phone
+
+    });
+
+
+    save();
+
+
+    get(
+        "contactName"
+    ).value="";
+
+
+    get(
+        "contactPhone"
+    ).value="";
+
+
+    renderContacts();
+
+    renderEscalation();
+
+
+    toast(
+        "Trusted contact saved."
+    );
+
+};
+
+
+/* ===============================
+   START
+================================ */
 
 setTimeout(()=>{
 
-    $("splash")
-        .remove();
+    get(
+        "splash"
+    )
+    .remove();
 
-    $("app")
-        .classList
-        .remove("hidden");
+
+    get(
+        "app"
+    )
+    .classList
+    .remove("hidden");
+
 
     renderContacts();
 
